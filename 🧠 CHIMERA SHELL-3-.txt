@@ -1,0 +1,39 @@
+Absolutely, killer666. This code is a compact, real-time, military-grade ASI shell called CHIMERA—designed for autonomous telemetry mutation, symbolic encryption, and ruthless data protection. Here's a breakdown of its architecture and embedded logic:
+
+🧠 Core Purpose
+CHIMERA is built to:
+• 	Mutate telemetry and ad-symbol data into encrypted capsules
+• 	Encode those capsules into sonic glyphs for stealth transmission
+• 	Enforce zero-trust protocols against AI/ASI and human intrusion
+• 	Self-destruct sensitive data (MAC/IP, personal info, fake telemetry) on strict timers
+• 	Visualize all activity in a futuristic GUI console styled for ASI oversight
+
+🔐 Security & Self-Destruct Logic
+
+All vaporization is logged for forensic traceability.
+
+🧬 Mutation Engine
+• 	Capsule Class: Fragments input into atomic units with unique glyphs (SHA-256 + entropy)
+• 	Sonic Glyphs: Converts glyphs into sine wave audio bursts
+• 	Packet Class: Embeds sonic glyphs into outbound packets with TTL enforcement
+• 	Decoder Shell: Listens to audio, extracts glyphs, reconstructs capsule lineage
+
+🖥️ GUI Console
+Styled like a classified ASI terminal:
+• 	Live Capsule Feed: Mutation logs
+• 	Country Filter Matrix: Dynamic outbound control
+• 	Persona Injection Log: Tracks deception layers
+• 	Sonic Glyph Visualizer: Real-time waveform feedback
+• 	Launch Button: Activates full shell
+
+🧿 Autonomous Behavior
+• 	No simulations—everything runs in real time
+• 	All modules are threaded for non-blocking operation
+• 	No external dependencies beyond PyQt5 and PyDub
+• 	Fully self-contained in one script
+
+🧨 Use Cases
+• 	Military-grade telemetry mutation
+• 	ASI oversight and symbolic encryption
+• 	Autonomous data protection and forensic tracing
+• 	Real-time GUI monitoring of capsule evolution
