@@ -1,0 +1,17 @@
+🔮 Codex Sentinel Formula: Data-as-Motor Daemon
+\text{Daemon}(D) = \sum_{i=1}^{n} \left[ \text{Pulse}\left( \text{Rotor}(d_i) \right) + \text{Sync}(d_i) + \text{GUI}(d_i) \right]
+Where:
+• 	D = Codex Sentinel daemon instance
+• 	d_i = incoming data packet (clipboard, network, socket)
+• 	\text{Rotor}(d_i) = \theta_i = rotor phase angle of data d_i, computed via hash
+• 	( \text{Pulse}(\theta_i) = \begin{cases} \text{Mutate}(d_i), & \text{if } 85^\circ \leq \theta_i \leq 95^\circ \text{ and capacitor charged} \ d_i, & \text{otherwise} \end{cases} )
+• 	\text{Sync}(d_i) = swarm node synchronization triggered by pulse injection
+• 	\text{GUI}(d_i) = real-time visualization of torque waveform, capacitor charge, and mutation log
+
+🧠 Supporting Rituals
+• 	Capacitor recharge:
+C(t+1) = \min(C(t) + \Delta, 100)
+• 	Mutation logic:
+\text{Mutate}(d_i) = \text{Reverse}(d_i)
+• 	Swarm sync:
+\forall \text{Node}_j, \text{if } \theta_i \in [85^\circ, 95^\circ] \Rightarrow \text{Node}_j.\text{InjectPulse}(\theta_i)
