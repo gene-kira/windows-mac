@@ -1,0 +1,68 @@
+🧠 Core Purpose
+The shell is designed to give you real-time visibility and symbolic control over telemetry, input streams, registry toggles, and system-level behaviors. It’s not just a privacy tool — it’s a ritualized sentinel that watches, logs, purges, and syncs across symbolic nodes.
+
+🔐 What It Protects and Monitors
+1. Input Stream Ingestion
+• 	🧠 Keyboard: Logs every keypress with symbolic tags and threat-level classification.
+• 	🖱️ Mouse: Captures click events and coordinates, tagging them for traceability.
+• 	📷 Webcam: Periodically activates and logs frame access to detect unauthorized use.
+2. Threat Classification
+• 	Every input event is classified as LOW, MEDIUM, or HIGH threat based on symbolic heuristics (e.g., camera access = HIGH).
+• 	Threat levels are visualized with color-coded status: green, orange, red.
+3. Trace Registry
+• 	All input events are stored in a RAM-only trace log.
+• 	You can export the log, purge it, or inspect symbolic tags for forensic insight.
+4. Registry Toggle Control
+• 	GUI buttons let you manually allow or deny:
+• 	Clipboard history
+• 	Screen clipping
+• 	Tailored experiences
+• 	Advertising ID
+• 	Location services
+• 	Each toggle is tagged symbolically and logged for traceability.
+5. Telemetry Purge
+• 	Scans and deletes diagnostic registry keys.
+• 	Purges cached clipboard and screen capture files.
+• 	Logs every purge event with symbolic overlays.
+6. Network Sniffing
+• 	Monitors active outbound connections.
+• 	Logs remote IP, port, and associated process name.
+• 	Symbolically tags each connection for forensic traceability.
+7. Process Monitoring
+• 	Scans running processes for elevation attempts or admin-level access.
+• 	Flags suspicious processes and logs them with symbolic tags.
+8. Node Sync Simulation
+• 	Simulates syncing purge rules and threat signatures across symbolic nodes.
+• 	Each sync event is tagged and logged.
+• 	Represents distributed, swarm-aware defense logic.
+
+🧿 GUI Features
+• 	Glyph Loop: Animated status indicator cycles through 🧿 👁️ 🔄 to show activity.
+• 	Threat Status Bar: Color-coded label updates in real time based on threat level.
+• 	Progress Slider: Visualizes scan duration and timed operations.
+• 	Log Panel: Displays all symbolic events, toggles, and daemon activity.
+• 	Control Buttons:
+• 	Run Scan + Sync
+• 	Export Trace Log
+• 	Purge All Traces
+• 	Show Ghost IDs
+
+🔁 Autonomous Daemons
+• 	All monitoring runs in background threads:
+• 	Keyboard listener
+• 	Mouse listener
+• 	Webcam scanner
+• 	Network sniffer
+• 	Process monitor
+These daemons operate continuously, feeding symbolic data into the trace and threat registries.
+
+🧬 Symbolic Architecture
+• 	Every event is tagged with a unique symbol using SHA-256 + timestamp.
+• 	Ghost Mode randomizes device IDs for obfuscation.
+• 	All logic is fused into a single, expressive shell — compact, resilient, and mythic.
+
+⚠️ What It Does Not Do
+• 	It does not encrypt files or sandbox your system.
+• 	It does not block outbound traffic or act as a firewall.
+• 	It does not replace antivirus or patch vulnerabilities.
+Instead, it gives you manual control, symbolic insight, and ritualized purge logic — empowering you to monitor and respond in real time.
