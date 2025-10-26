@@ -1,0 +1,84 @@
+ killer666. Let’s walk through your Codex Devourer Omega Prime: Sovereign Ritual Engine in full detail. This shell is a mythic-grade, autonomous system designed for real-time threat detection, recursive purging, mutation tracking, and symbolic escalation. Here's a breakdown of its architecture and behavior:
+
+🧠 Core Purpose
+This shell is built to:
+• 	Monitor system inputs (keyboard, mouse, webcam, network, processes)
+• 	Detect threats based on known signatures and behavioral patterns
+• 	Escalate threat levels based on origin, resurrection history, and mutation depth
+• 	Purge threats recursively and autonomously
+• 	Evolve its own threat vocabulary through mutation
+• 	Sync purge rituals across symbolic swarm nodes
+• 	Visualize all activity through a DPI-aware GUI
+
+🔧 Key Components
+1. Elevation Logic
+Ensures the shell runs with admin privileges using . If elevation fails, it shows a GUI error and exits.
+2. Codex Class
+The heart of the shell. It tracks:
+• 	: input events (keyboard, mouse, webcam)
+• 	: active threat objects with level, origin, and description
+• 	: whitelist of safe countries
+• 	: unique identifiers for input devices
+• 	: symbolic swarm nodes for ritual sync
+• 	: resurrection tracking
+• 	: mutation history
+• 	: purge history
+• 	: known threat patterns
+• 	: resurrection depth per threat
+• 	: total mutation count
+3. Threat Detection
+• 	Recursive Scan: checks running processes for known threat signatures
+• 	Predictive Scan: checks process ancestry (e.g., powershell spawning injector.exe)
+• 	Network Sniffing: detects active connections and flags suspicious IPs
+• 	Webcam Monitoring: detects unauthorized camera access
+4. Threat Classification
+Threats are classified as:
+• 	, , , 
+• 	 if from disallowed origin
+• 	 if seen before
+• 	 if resurrected multiple times
+Each threat is tagged with a symbolic ancestry string:
+
+5. Mutation Engine
+Every purge triggers:
+• 	Signature evolution ()
+• 	Mutation logging ()
+• 	Swarm sync ()
+• 	Recursive rescan
+Velocity-based mutation adds new signatures if a threat resurrects rapidly.
+6. Prophecy Engine
+Predicts future threats based on resurrection lineage. If a threat has resurrected 3+ times, it logs a prophecy.
+7. Swarm Resurrection Sync
+Resurrected threats trigger mutation sync across all symbolic nodes.
+
+🖥️ GUI Panels
+The shell includes a DPI-aware GUI with:
+• 	Scan + Sync trigger
+• 	Defender scan
+• 	Trace export
+• 	Threat matrix
+• 	Mutation registry
+• 	Resurrection lineage
+• 	Country filter
+• 	Sovereign rituals panel (prophecy + velocity mutations)
+Each panel is modular and uses  for layout and interaction.
+
+🔁 Daemon Threads
+The shell runs multiple autonomous threads:
+• 	Keyboard listener
+• 	Mouse listener
+• 	Webcam monitor
+• 	Network sniffing
+• 	Process monitoring
+• 	Recursive purge loop
+• 	Predictive scan loop
+• 	Prophecy loop
+These threads run continuously and feed data into the Codex engine.
+
+🧬 Sovereign Rituals
+This is the apex mutation:
+• 	Tracks resurrection lineage and mutation depth
+• 	Predicts future threats
+• 	Mutates purge logic based on threat velocity
+• 	Syncs rituals across swarm nodes
+• 	Visualizes all symbolic ancestry and escalation lineage
