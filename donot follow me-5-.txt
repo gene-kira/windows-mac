@@ -1,0 +1,75 @@
+Absolutely — here’s a full breakdown of what your Codex Purge Shell now does, feature by feature. This is the complete operational profile of your mythic-grade, auto-elevating shell:
+
+🧿 Codex Purge Shell — Full Capabilities Overview
+🔹 1. Auto-Elevation
+• 	Automatically detects if the shell is running with administrator privileges.
+• 	If not, it relaunches itself with elevated rights using .
+• 	Ensures full access to protected registry keys like .
+
+🔹 2. Registry Purge Engine
+• 	Targets multiple telemetry and tracking vectors across Windows and Edge.
+• 	Uses  for direct registry access (no subprocesses).
+• 	Purges the following vectors:
+• 	Activity History
+• 	Advertising ID
+• 	Tailored Experiences
+• 	Telemetry
+• 	Edge Personalization
+• 	Each purge is logged and confirmed with symbolic overlay feedback.
+
+🔹 3. Autonomous Mode
+• 	When enabled, the shell:
+• 	Automatically purges all vectors on launch.
+• 	Monitors for resurrection attempts and re-purges if needed.
+• 	Triggers swarm sync visualization after each purge.
+• 	Autonomous mode setting is saved to disk and persists across launches.
+
+🔹 4. Resurrection Detection
+• 	Continuously monitors registry keys for changes.
+• 	If a value is re-enabled (e.g. telemetry turned back on), it:
+• 	Logs the resurrection event.
+• 	Re-purges the offending key.
+• 	Updates the threat matrix in the GUI.
+
+🔹 5. Swarm Sync Visualization
+• 	After each purge, a symbolic “swarm sync” is triggered.
+• 	This represents propagation of purge rules across nodes.
+• 	Logged as a visual event in the live log viewer.
+
+🔹 6. Symbolic Overlays
+• 	Every purge action is logged with symbolic feedback:
+• 	✅ for success
+• 	❌ for failure
+• 	🧬 for symbolic purge
+• 	🕸️ for swarm sync
+• 	🧠 for resurrection detection
+• 	These overlays appear in the live log viewer.
+
+🔹 7. Live Log Viewer
+• 	Scrollable text panel inside the GUI.
+• 	Displays all purge events, errors, syncs, and status updates in real time.
+• 	Automatically scrolls to the latest entry.
+
+🔹 8. Threat Matrix
+• 	GUI labels show the status of each vector:
+• 	“Active” (red) if not purged
+• 	“Purged” (green) if successfully disabled
+• 	Updates dynamically after each purge or resurrection event.
+
+🔹 9. Manual Controls
+• 	GUI buttons allow manual purge of each vector.
+• 	“Manual Override” button purges all vectors instantly.
+• 	Confirmation dialogs prevent accidental purging.
+
+🔹 10. Persistent Settings
+• 	Autonomous mode setting is saved to .
+• 	Automatically loaded on launch.
+• 	No need to re-enable each time.
+
+🔹 11. Crash Protection
+• 	GUI wrapped in  to catch runtime errors.
+• 	Any crash is logged to  and printed to console.
+
+🔹 12. Log File Output
+• 	All events are saved to  with timestamps.
+• 	Includes purge actions, errors, elevation status, and resurrection detections.
