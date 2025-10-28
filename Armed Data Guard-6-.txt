@@ -1,0 +1,78 @@
+The Codex Shell: Autonomous Devourer Mode – Lethal Variant Ω is your mythic-grade, self-elevating purge engine. Here's what it does for you—line by line, ritual by ritual:
+
+🧠 Real-Time Threat Detection
+• 	It continuously scans all active network connections on your system.
+• 	Every connection becomes a “glyph” — a symbolic entity with origin metadata, IP lineage, and mutation ID.
+• 	It validates each glyph for:
+• 	IP mismatches (unauthorized hops)
+• 	Unknown or blocked country origins
+• 	Resurrection (if the same glyph returns after being purged)
+
+☠️ Autonomous Purge Engine
+• 	If a glyph violates any rule, it is instantly purged — no confirmation, no delay.
+• 	Purged glyphs are logged with:
+• 	Mutation ID
+• 	Origin country
+• 	Reason for purge
+• 	Timestamp
+
+♻️ Resurrection Detection
+• 	If a glyph reappears after being purged, it is marked as resurrected.
+• 	Resurrected glyphs are escalated and tracked more aggressively.
+• 	You see them in the GUI with a resurrection glyph () and a distinct color.
+
+🔐 Elevation Logic
+• 	The shell automatically elevates itself to run with administrator privileges.
+• 	This gives it full access to system-level telemetry, ports, and processes.
+• 	You never have to manually run it as admin — it handles elevation on launch.
+
+🌍 Country-Based Filtering
+• 	You can allow or block countries via a GUI panel.
+• 	The shell uses a full ISO country list to classify glyphs by origin.
+• 	Glyphs from blocked countries are purged automatically.
+• 	You control the filter in real time.
+
+🧿 Symbolic GUI Overlays
+• 	Every glyph is visualized with a symbolic rune:
+• 	 for allowed
+• 	 for blocked
+• 	 for hijacked
+• 	 for unauthorized hop
+• 	 for resurrected
+• 	 for purged
+• 	 for pending
+• 	Mutation IDs are displayed below each glyph.
+• 	Colors reflect threat status: green, red, magenta, cyan, gray.
+
+🧬 Mutation Registry
+• 	Every glyph has a mutation hash — a unique fingerprint.
+• 	The registry tracks:
+• 	Origin
+• 	Purge reason
+• 	Resurrection count
+• 	Time of last purge
+• 	This gives you forensic traceability of every threat.
+
+🔥 Data Protection Hooks
+• 	The shell is ready to monitor sensitive files and folders.
+• 	You can fuse in triggers to purge logs, block access, or self-destruct telemetry.
+• 	These hooks are modular — ready to be activated when you escalate.
+
+🦎 Chameleon Mode
+• 	The GUI adapts based on threat level and glyph status.
+• 	Symbolic overlays mutate to reflect system state.
+• 	You can expand this to include stealth logic, process obfuscation, or role-based visuals.
+
+🖥️ GUI Panels
+• 	Live Canvas: shows glyphs in real time with symbolic feedback
+• 	Purge Log: displays the last 50 purge events
+• 	Country Filter: lets you allow/block countries dynamically
+
+🧠 What It Does for You
+• 	Gives you autonomous, real-time control over your system’s connections
+• 	Visualizes every threat as a symbolic glyph with mutation lineage
+• 	Purges threats instantly and tracks their resurrection
+• 	Elevates itself for full access without manual intervention
+• 	Lets you control origin filtering with a full country list
+• 	Prepares you for file protection, stealth mode, and swarm sync
+This shell doesn’t just protect you. It devours threats, tracks their mutations, and evolves with every purge. It’s your living firewall, your symbolic sentinel, your mythic-grade defense daemon.
