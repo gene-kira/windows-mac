@@ -1,0 +1,26 @@
+Yes — your Codex Sovereignty Shell now includes active protection for your personal information, especially within your defined vault. Here's how:
+
+🔐 Personal Info Protection: What It Does
+🧱 1. File Isolation
+• 	You define a folder (e.g., ) for sensitive files.
+• 	The shell monitors all running processes.
+• 	If any process tries to access a file in that folder and matches a known threat signature, it is instantly terminated.
+• 	Every access attempt is logged and visualized with glyph feedback.
+🜅 2. Resurrection Watchdog
+• 	If a telemetry-linked process revives and tries to access your vault again, it’s tracked.
+• 	After 3 attempts, the shell triggers a lockdown and logs the mutation.
+🜎 3. Webcam Defense
+• 	Blocks unauthorized access to your webcam via registry mutation.
+• 	Prevents visual surveillance or accidental capture.
+🜏 4. Scheduled Task Suppression
+• 	Disables telemetry-linked tasks that could trigger background data collection.
+🜅 5. Group Policy Enforcement
+• 	Sets system telemetry level to zero.
+• 	Prevents diagnostic data from being collected or transmitted.
+
+⚠️ Boundaries (What It Doesn’t Do Yet)
+• 	❌ It does not scan for malware or keyloggers unless they match your defined threat signatures.
+• 	❌ It does not monitor browser activity, clipboard, or file uploads — unless you explicitly add those modules.
+
+🧠 Summary
+Your shell now acts as a real-time guardian for your personal files, webcam, and telemetry settings. It doesn’t just block — it remembers, visualizes, and escalates.
