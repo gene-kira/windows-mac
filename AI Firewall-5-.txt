@@ -1,0 +1,74 @@
+Absolutely. Here's a full breakdown of what the Codex Sentinel Shell can do — now that it's fully fused with real-time modules, animated overlays, and GUI control:
+
+🧠 Codex Sentinel Shell — Capabilities Overview
+This script is a mythic-grade, autonomous firewall sentinel designed to run on your system with full GUI control and real-time threat awareness. Here's what it does:
+
+🔐 Real-Time Port Defense
+• 	Binds to a rotating set of TCP ports (default: 5 at a time).
+• 	Monitors those ports for incoming connection attempts using non-blocking sockets and .
+• 	Automatically rotates ports on a timer (30 min, 1 hr, or 6 hr) — or instantly if a threat is detected.
+
+🛡️ Threat Detection & Auto-Rotation
+• 	Detects real incoming probes or connection attempts.
+• 	Logs the IP address and country of origin using GeoIP lookup ().
+• 	If the connection comes from a disallowed country, it blocks and logs the event.
+• 	Triggers immediate port rotation when a probe or blocked country is detected.
+
+☠️ Resurrection Detection
+• 	Tracks ports that were previously closed.
+• 	If a port is reopened in a future rotation, it logs a “Resurrection” event in the Threat Matrix.
+
+🌐 Country-Based Filtering
+• 	GUI dropdown lets you select an allowed country (e.g., US, UK, DE).
+• 	Any incoming connection from a different country is flagged and blocked.
+• 	Fully dynamic — changes take effect instantly.
+
+✅ Allow/Disallow Port Lists
+• 	GUI controls let you define which ports are allowed or disallowed.
+• 	Rotation pool is filtered accordingly:
+• 	If the allow list is active, only those ports are considered.
+• 	Disallowed ports are always excluded.
+• 	You can add/remove ports or clear the lists at any time.
+
+📜 Live Log Viewer
+• 	Streams real-time system events:
+• 	Rotation updates
+• 	Country changes
+• 	Allow/disallow list changes
+• 	Errors or connection handling issues
+
+🧠 Threat Matrix Panel
+• 	Logs symbolic threat events:
+• 	⚠️ Probes
+• 	🌐 Blocked IPs
+• 	☠️ Resurrections
+• 	Timestamped and scrollable for forensic review
+
+🧬 Animated Port Status Overlay
+• 	Real-time glyphs show port status:
+• 	🟢 Open and idle
+• 	🔴 Recently probed (flashes red for 5 seconds)
+• 	☠️ Resurrected (glows purple)
+• 	Updates every second with live feedback
+
+🖥️ GUI Control Panel
+• 	Built with Tkinter — compact, DPI-aware, and responsive
+• 	Includes:
+• 	Firewall toggle (Start/Stop)
+• 	Rotation interval selector
+• 	Country selector
+• 	Live logs
+• 	Threat matrix
+• 	Port status overlay
+• 	Allow/disallow list management
+
+🧠 Autonomous Logic
+• 	Runs as a self-contained daemon with multiple threads:
+• 	Port rotation
+• 	Threat detection
+• 	Overlay updates
+• 	GUI refresh
+• 	Elevates itself to admin on Windows if needed
+• 	Cloaks ports using  on Linux
+
+This shell is not just a firewall — it’s a living ritual of defense, mutation, and visualization. Every probe becomes a glyph. Every resurrection is logged. Every port is sovereign.
