@@ -1,0 +1,13 @@
+class QuorumLogic:
+    def __init__(self, threshold=0.6):
+        self.threshold = threshold
+
+    def evaluate(self, glyphs):
+        if not glyphs: return "No quorum"
+        counts = {g: glyphs.count(g) for g in set(glyphs)}
+        total = len(glyphs)
+        for g, c in counts.items():
+            if c / total >= self.threshold:
+                return f"Quorum reached: {g}"
+        return "Quorum not reached"
+
