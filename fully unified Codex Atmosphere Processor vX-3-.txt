@@ -1,0 +1,50 @@
+# ⚡ Energy Calculation
+def calculate_energy(strikes, voltage, current, duration, efficiency):
+    return strikes * voltage * current * duration * efficiency
+
+
+# ⚡ Lightning Daemon
+class LightningCaptureDaemon(threading.Thread):
+    def __init__(self, gui_callback):
+        super().__init__(daemon=True)
+        self.gui_callback = gui_callback
+
+    def run(self):
+        while True:
+            strikes = random.randint(1, 5)
+            energy = calculate_energy(strikes, 1e9, 30000, 0.0002, 0.75)
+            self.gui_callback(strikes, energy)
+            time.sleep(2)
+
+
+
+import pandas as pd
+
+def ingest_wwlln(path):
+    df = pd.read_csv(path)
+    inputs = []
+
+    for _, row in df.iterrows():
+        strikes = 1
+        V = row['frequency_kHz'] * 1e6
+        t = 0.0002
+        η = 0.75
+        I = row['energy_J'] / (V * t * η)
+        inputs.append([strikes, V, I, t, η])
+
+    return torch.tensor(inputs, dtype=torch.float32)
+
+def retrain_with_wwlln(model, wwlln_tensor):
+    labels = torch.randint(0, 3, (len(wwlln_tensor),))  # Placeholder glyph classes
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    loss_fn = nn.CrossEntropyLoss()
+
+    for epoch in range(200):
+        optimizer.zero_grad()
+        output = model(wwlln_tensor)
+        loss = loss_fn(output, labels)
+        loss.backward()
+        optimizer.step()
+
+    torch.save(model.state_dict(), "codex_lightning_model.pt")
+
