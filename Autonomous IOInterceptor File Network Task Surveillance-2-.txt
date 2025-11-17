@@ -1,0 +1,41 @@
+autonomous system daemon called the Codex Purge Shell. It fuses symbolic reasoning, system telemetry scanning, and a real-time GUI overlay to visualize and enforce constraints on your Windows environment. Here's what it does:
+
+🧠 Core Capabilities
+🔍 1. System Surveillance
+It continuously scans:
+• 	File I/O: Detects presence of telemetry-related files (e.g., DiagTrack, Feedback logs)
+• 	Network Packets: Monitors active connections and flags known telemetry IPs
+• 	Scheduled Tasks: Detects and suppresses telemetry-related tasks like FeedbackHub or DiagTrack
+🧩 2. Symbolic Constraint Engine
+You define symbolic rules like:
+
+The daemon evaluates these in real time. If any are violated, it triggers a purge and logs the violation.
+⚠️ 3. Violation Detection + Purge
+When constraints are violated:
+• 	The daemon logs the symbolic state
+• 	Triggers purge logic (stubbed in )
+• 	Stores the violation case in memory for future analysis
+
+🖥️ GUI Overlay Features
+✅ Constraint Matrix
+Shows all active constraints, their status (✓ or ✗), and source.
+🔻 Intercept Panel
+Displays live data from file, network, and task scans — color-coded for clarity.
+📜 Mutation Log
+Chronicles every constraint added, violation detected, or error encountered.
+❌ Error Panel
+Shows parsing errors for malformed constraints (e.g., missing  or invalid syntax).
+🧠 Constraint Composer
+Lets you add new symbolic rules live via the GUI.
+⚡ Violation Pulse
+Flashes red when any constraint is violated, green when all are satisfied.
+
+🔒 Thread-Safe Architecture
+• 	Uses  to safely emit log updates from the daemon thread to the GUI.
+• 	Uses  for periodic GUI refreshes — no unsafe thread access to UI.
+
+🔮 What You Can Do With It
+• 	Enforce symbolic policies on telemetry, privacy, and system behavior
+• 	Visualize violations and intercepted data in real time
+• 	Prototype mythic-grade overlays for sovereign control and feedback
+• 	Extend it with animated glyphs, resurrection detection, swarm sync logic, or distributed node propagation
