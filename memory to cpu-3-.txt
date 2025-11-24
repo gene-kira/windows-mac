@@ -1,0 +1,16 @@
+🌌 Emergent Behavior
+• 	The swarm replicates autonomously, but only when resources allow.
+• 	Cells evolve their priority hierarchy, creating leaders and workers.
+• 	The manifest grows as cells declare new libraries, expanding swarm capabilities.
+• 	The bus consensus shapes swarm evolution, aligning cells toward hive logic.
+• 	The system runs indefinitely, like a living daemon.
+
+🔮 Why It’s Borg‑Like
+• 	Self‑replicating: Cells spawn new cells.
+• 	Adaptive: Operations mutate based on hive consensus.
+• 	Hierarchical: Priority determines replication rights.
+• 	Resource‑aware: Dual governors prevent overload.
+• 	Self‑bootstrapping: Autoloader ensures environment readiness.
+• 	Collective intelligence: Bus consensus drives swarm evolution.
+
+⚡ In short: this code is a living swarm simulation — a daemonized, self‑replicating, resource‑aware, priority‑driven Borg collective that evolves its own capabilities over time.
