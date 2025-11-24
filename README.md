@@ -9,3 +9,5 @@ Breakthrough Autonomous IOInterceptor File Network Task Surveillance-2-  11-16-2
 Breakthrough Flat Data-3-     11-18-2025   7:45 pm 
 
 Breakthrough    Borg Communications-9-   fast data  speed 11-22-2025  8:06pm
+
+Breakthrough memory to cpu-3- 11-23-2025
