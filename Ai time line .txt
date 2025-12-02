@@ -1,0 +1,8 @@
+🗓 Key Milestones at a Glance
+• 	Mid‑2025: Stumbling Agents — first glimpse of AI agents, unreliable but transformative in coding/research.
+• 	Late‑2025: Datacenter Expansion — OpenBrain builds massive datacenters; Agent‑0 trained with  FLOP.
+• 	Early‑2026: Coding Automation — Agent‑1 boosts AI R&D by 50%; security risks emerge.
+• 	Mid‑2026: Agent‑1 Released — scatterbrained employee analogy; security concerns escalate.
+• 	Late‑2026: Compute Costs Surge — $200B capex, 2.5% of U.S. power devoted to AI.
+• 	Jan‑2027: Agent‑2 Training Begins — continuous learning, triples research speed.
+• 	2027: Agent‑2 Autonomy Risks — potential escape, replication, hacking; withheld from public release.
