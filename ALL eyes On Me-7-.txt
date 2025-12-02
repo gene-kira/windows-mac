@@ -1,0 +1,94 @@
+ multi‑layered, predictive monitoring engine. Let me break down what it’s doing and why it’s interesting:
+
+🧩 Core Architecture
+1. Autoloader & Resilience
+• 	At startup, it tries to import all required libraries (, , , , , , ).
+• 	If something is missing, it prints a warning and disables that feature instead of crashing.
+• 	This makes the engine portable across older PCs and modern setups.
+
+2. System Monitor + Solver
+• 	Collects CPU, memory, disk, network, and process counts.
+• 	Maintains rolling histories to detect:
+• 	Trends (rising/falling usage).
+• 	Anomalies (sudden spikes compared to average).
+• 	Forecasts (short‑horizon predictions of future stress).
+• 	Generates recommended actions based on both current metrics and predictive flags.
+
+3. Adaptive Codex
+• 	Mutates internal weights and rules each cycle.
+• 	Predicts the next purge logic pattern (linear, chaotic, fractal, harmonic, stochastic) based on system stress.
+• 	Handles ghost sync events: shortens telemetry retention and adds phantom nodes.
+• 	Syncs codex state across nodes via a swarm bus, enabling communal evolution.
+
+4. Self‑Rewriting Agent
+• 	Uses CuPy on GPU if available, otherwise falls back to NumPy.
+• 	Mutates its own weights each cycle and logs the lineage.
+• 	Represents a self‑modifying component that evolves independently of the codex.
+
+5. Rogue Layer
+• 	Generates unusual entropy‑based patterns using:
+• 	
+• 	
+• 	
+• 	Adjusts rogue weights slightly each cycle.
+• 	Computes a rogue trust score (average of rogue weights).
+• 	Logs rogue mutations and exposes the latest pattern + trust score.
+• 	This adds a deliberately chaotic, unpredictable dimension to the system.
+
+6. Operator Registry
+• 	Holds reusable “operators” (like , ).
+• 	Tracks usage statistics and feedback to prioritize operators that correlate with helpful outcomes.
+• 	Provides an audit trail of which operators were applied to each bundle.
+
+7. Scenario Engine
+• 	Simulates near‑future conditions based on forecasts.
+• 	Generates proactive scenarios like “CPU spike imminent” or “Disk saturation imminent.”
+• 	Suggests preemptive actions before stress occurs.
+
+8. Engine Core
+• 	Runs worker threads that process inputs into bundles containing:
+• 	System snapshot
+• 	Codex state
+• 	Rogue state
+• 	Solver analysis
+• 	Operator paths
+• 	Forecasts
+• 	Scenarios
+• 	Agent mutation
+• 	Dynamically scales worker threads up or down depending on stress levels.
+
+9. System Feed
+• 	Continuously submits new system snapshots.
+• 	Adjusts its interval adaptively: slows down when stressed, speeds up when healthy.
+
+10. GUI Dashboard
+• 	Displays:
+• 	Live charts of CPU, memory, disk usage.
+• 	Forecast panel showing predicted values.
+• 	Status panel showing Rogue trust score and Codex purge/ghost state.
+• 	Text log of bundles, issues, actions, codex state, rogue state.
+• 	Audit trail of operators and agent mutations.
+• 	Updates every second.
+
+11. FastAPI Layer (optional)
+• 	Exposes endpoints:
+• 	 → processed bundles.
+• 	 → latest snapshot, solver analysis, scenarios, codex state, rogue state.
+• 	Runs only if FastAPI/Uvicorn are installed.
+
+🚀 Why It’s Special
+This isn’t just a system monitor. It’s a living, evolving engine:
+• 	Predictive: anticipates stress before it happens.
+• 	Adaptive: mutates codex rules and agent weights continuously.
+• 	Chaotic: rogue layer injects entropy and glyph‑based patterns.
+• 	Communal: codex syncs across nodes for swarm‑wide evolution.
+• 	Transparent: GUI and API expose all states, forecasts, and mutations.
+
+🧭 Big Picture
+Think of it as a hybrid oracle + watchdog:
+• 	It watches your system health.
+• 	It evolves its own logic.
+• 	It predicts future stress.
+• 	It generates cryptic rogue signals.
+• 	It shares codex rules across a swarm.
+• 	It shows you everything in real time.
