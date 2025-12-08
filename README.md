@@ -23,4 +23,4 @@ Breakthrough    Needle in the hay stack-6-   it will lock down the system :]   1
 
 Breakthrough   Mirror engine MirrorDefense and MirrorHook tech  12-5-2025 11:04 am
 
-Today we have made our first fully automated Borg Research 3  12-8-2025 11:36 am
+Today we have made our first fully automated Borg Research 3  12-8-2025 11:36 am it will make new code for you all day long when it beeps the code is done just click to see the code  :] 
