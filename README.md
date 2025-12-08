@@ -26,3 +26,5 @@ Breakthrough   Mirror engine MirrorDefense and MirrorHook tech  12-5-2025 11:04 
 Today we have made our first fully automated Borg Research 3  12-8-2025 11:36 am it will make new code for you all day long when it beeps the code is done just click to see the code  :] 
 
 i just made the updated Borg Research 6  it looks at all live data on the web you will need a big disk drive to hold all of the data it can make any size code so be ready start with a mininal of 10 terabytes  this is for all the companies and people who have given me free software this is my pay back to them
+
+updated Borg Research 7     for  drive size because it will get big  this code will break the AI Bubble :]   
