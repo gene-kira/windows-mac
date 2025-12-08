@@ -1,0 +1,185 @@
+2025-12-08 11:00:03,489 [INFO] Starting node node-Rosewilli9intel-3089 | dir=C:\Users\tbarr\Desktop\node-Rosewilli9intel-3089 | tcp=39739 | udp=64321 | external=on | repl=off
+2025-12-08 11:00:03,492 [INFO] Dashboard running at http://localhost:8088
+2025-12-08 11:00:03,494 [ERROR] Evolution loop error; continuing with backoff.
+Traceback (most recent call last):
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 911, in evolve
+    idea = mutate_idea(base) if random.random() < 0.8 else compose_idea(cfg["seed_noise"])
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 211, in mutate_idea
+    m[slot] = random.choice(PRIMITIVES[slot])
+                            ~~~~~~~~~~^^^^^^
+KeyError: 'architecture'
+2025-12-08 11:00:03,494 [INFO] TCP server 0.0.0.0:39739 codec=json+zlib schema=1
+2025-12-08 11:01:06,497 [ERROR] Evolution loop error; continuing with backoff.
+Traceback (most recent call last):
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 911, in evolve
+    idea = mutate_idea(base) if random.random() < 0.8 else compose_idea(cfg["seed_noise"])
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 211, in mutate_idea
+    m[slot] = random.choice(PRIMITIVES[slot])
+                            ~~~~~~~~~~^^^^^^
+KeyError: 'architecture'
+2025-12-08 11:02:09,500 [ERROR] Evolution loop error; continuing with backoff.
+Traceback (most recent call last):
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 911, in evolve
+    idea = mutate_idea(base) if random.random() < 0.8 else compose_idea(cfg["seed_noise"])
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 211, in mutate_idea
+    m[slot] = random.choice(PRIMITIVES[slot])
+                            ~~~~~~~~~~^^^^^^
+KeyError: 'mechanism'
+2025-12-08 11:03:12,504 [ERROR] Evolution loop error; continuing with backoff.
+Traceback (most recent call last):
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 911, in evolve
+    idea = mutate_idea(base) if random.random() < 0.8 else compose_idea(cfg["seed_noise"])
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbarr\Desktop\Borg Research.py", line 211, in mutate_idea
+    m[slot] = random.choice(PRIMITIVES[slot])
+                            ~~~~~~~~~~^^^^^^
+KeyError: 'architecture'
+2025-12-08 11:06:18,640 [INFO] Starting node node-Rosewilli9intel-3089 | dir=C:\Users\tbarr\Desktop\node-Rosewilli9intel-3089 | tcp=39739 | udp=64321 | external=on | repl=off
+2025-12-08 11:06:18,641 [INFO] Dashboard running at http://localhost:8088
+2025-12-08 11:06:18,643 [INFO] TCP server 0.0.0.0:39739 codec=json+zlib schema=1
+2025-12-08 11:06:20,068 [INFO] [10] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:21,725 [INFO] [20] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:23,468 [INFO] [30] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:23,825 [INFO] Stagnation detected; injecting chaos batch.
+2025-12-08 11:06:25,319 [INFO] [40] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:27,242 [INFO] [50] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:29,247 [INFO] [60] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:29,858 [INFO] Stagnation detected; injecting chaos batch.
+2025-12-08 11:06:31,369 [INFO] [70] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:33,561 [INFO] [80] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:35,827 [INFO] [90] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:36,746 [INFO] Stagnation detected; injecting chaos batch.
+2025-12-08 11:06:38,228 [INFO] [100] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:06:40,690 [INFO] [110] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321
+2025-12-08 11:19:55,011 [INFO] Starting node node-Rosewilli9intel-3089 | dir=C:\Users\tbarr\Desktop\node-Rosewilli9intel-3089 | tcp=39739 | udp=64321 | external=on | repl=off
+2025-12-08 11:19:55,084 [INFO] Dashboard running at http://localhost:8088
+2025-12-08 11:19:55,120 [INFO] TCP server 0.0.0.0:39739 codec=json+zlib schema=1
+2025-12-08 11:19:55,187 [INFO] Projects completed: Hermes-foundry-arc-0dfb87, Phoenix-foundry-nova-8578f6, Titan-shield-aether-247dbb, Aurora-engine-flux-92bded, Orion-shield-aether-ab27a7, Valkyrie-foundry-prime-8f08d0
+2025-12-08 11:19:55,707 [INFO] Projects completed: Chronos-saddle-delta-21ad1c, Talos-tower-flux-bffa2a, Borealis-tower-x-b5bf9a, Selene-kite-weave-ce61f3, Helios-bridge-flux-a0e54e, Gaea-garden-nova-aaa4c9
+2025-12-08 11:19:56,286 [INFO] Projects completed: Pandora-kite-pulse-9670f3, Nereid-foundry-prime-a844fc, Zephyr-saddle-shade-75bcd4, Hyperion-tower-shade-601db3, Hyperion-compass-flux-e33079, Arcadia-sphere-flux-d69504
+2025-12-08 11:19:56,968 [INFO] Projects completed: Helios-mesh-flux-802533, Chimera-sphere-delta-c7a0af, Valkyrie-bridge-ghost-a75d57, Daedalus-foundry-nova-182492, Borealis-garden-prime-6dbc5a, Valkyrie-matrix-ghost-d808b9
+2025-12-08 11:19:57,770 [INFO] Projects completed: Selene-horizon-prime-c7e85c, Daedalus-array-arc-5ba55e, Nereid-bridge-weave-ea88fd, Gaea-harbor-delta-891db2, Aegis-mirror-weave-4b45b8, Atlas-foundry-shade-5a4e44
+2025-12-08 11:19:58,733 [INFO] Projects completed: Leviathan-array-prime-dafffa, Zephyr-saddle-aether-bb3b7f, Aegis-kite-arc-182b80, Cerberus-beacon-ghost-eb983f, Icarus-foundry-shade-bcb64f, Nyx-lattice-shade-a82661
+2025-12-08 11:19:59,875 [INFO] Projects completed: Hermes-shield-echo-80b86c, Valkyrie-weaver-arc-0d85a1, Borealis-array-arc-32b9d3, Talos-horizon-nova-6c93b3, Hermes-horizon-ghost-838717, Hyperion-sphere-flux-84ea3c
+2025-12-08 11:20:01,255 [INFO] Projects completed: Rhea-crucible-arc-96ca1f, Gaea-saddle-x-e08040, Chimera-mesh-aether-c1898a, Gaea-shield-shade-084aff, Nyx-array-x-03c9a1, Elysium-garden-prime-6fd16a
+2025-12-08 11:20:02,941 [INFO] Projects completed: Helios-horizon-delta-5214a5, Talos-garden-x-208768, Daedalus-beacon-shade-6a3273, Elysium-matrix-pulse-3e3763, Talos-saddle-echo-bf0245, Elysium-compass-nova-7f3e82
+2025-12-08 11:20:04,993 [INFO] Projects completed: Talos-kite-x-4b2d57, Hyperion-tower-x-b6a924, Leviathan-crucible-x-23df07, Borealis-garden-delta-81689c, Gaea-foundry-echo-6e21e5, Hyperion-spiral-echo-cc79c0
+2025-12-08 11:20:05,225 [INFO] [120] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | ports tcp=39739 udp=64321 | active=24 completed=60
+2025-12-08 11:20:06,925 [INFO] Projects completed: Chronos-mirror-shade-f6043c, Borealis-mirror-echo-0595f5, Phoenix-crucible-aether-0bb554, Hyperion-spiral-shade-27e9f7, Leviathan-bridge-flux-7c3f94, Hermes-swarm-pulse-be5b98
+2025-12-08 11:20:09,235 [INFO] Projects completed: Prometheus-forge-ghost-0e9b91, Talos-loom-flux-a94b25, Hyperion-harbor-echo-8c6729, Nyx-loom-shade-48dfd9, Valkyrie-mirror-nova-653248, Rhea-kite-echo-c16bb1
+2025-12-08 11:20:11,338 [INFO] Projects completed: Selene-saddle-shade-e24b8e, Valkyrie-shield-pulse-707db4, Nyx-garden-arc-5160b1, Cerberus-array-weave-b0c6f8, Pandora-beacon-arc-3649eb, Elysium-bridge-prime-06b4e7
+2025-12-08 11:20:13,734 [INFO] Projects completed: Aurora-engine-echo-ded233, Chimera-horizon-delta-d04359, Gaea-matrix-pulse-e2614f, Chronos-mesh-weave-ca39fc, Selene-engine-arc-40556b, Icarus-shield-shade-d06c0d
+2025-12-08 11:20:16,139 [INFO] Projects completed: Cerberus-beacon-echo-03e567, Gaea-swarm-echo-238232, Phoenix-compass-echo-ec3f24, Icarus-garden-shade-61dadf, Aegis-kite-arc-9a6c25, Pandora-lattice-delta-ba4f4a
+2025-12-08 11:20:18,540 [INFO] Projects completed: Arcadia-harbor-flux-24df64, Lyra-tower-flux-aba78f, Phoenix-beacon-shade-56dfd9, Phoenix-horizon-echo-169a87, Gaea-compass-flux-ba9914, Chimera-lattice-shade-e780b0
+2025-12-08 11:25:06,488 [INFO] Starting node node-Rosewilli9intel-3089 | dir=C:\Users\tbarr\Desktop\node-Rosewilli9intel-3089 | tk=on
+2025-12-08 11:25:06,668 [INFO] Projects completed: Titan-tower-shade-f1d793, Zephyr-spiral-arc-0516e9, Gaea-loom-prime-8e0c71, Selene-harbor-delta-3d0f44, Icarus-loom-nova-4b3a3a, Daedalus-crucible-aether-5ee121
+2025-12-08 11:25:07,173 [INFO] Projects completed: Hermes-harbor-aether-a90d57, Cerberus-saddle-ghost-96150b, Gaea-glider-x-d6f7f5, Hyperion-compass-ghost-589518, Lyra-lattice-flux-6438a7, Helios-swarm-aether-32b92c
+2025-12-08 11:25:07,769 [INFO] Projects completed: Arcadia-beacon-echo-a4f30e, Borealis-glider-weave-56fb4f, Elysium-beacon-prime-95ff5d, Leviathan-glider-echo-6e0588, Lyra-saddle-ghost-43366c, Hyperion-crucible-flux-2daa2a
+2025-12-08 11:25:08,466 [INFO] Projects completed: Atlas-engine-aether-9454db, Talos-beacon-arc-b9a980, Selene-beacon-aether-42dac4, Pandora-swarm-weave-45249e, Helios-foundry-pulse-29db3c, Phoenix-horizon-pulse-ce45cf
+2025-12-08 11:25:09,270 [INFO] Projects completed: Valkyrie-harbor-aether-611683, Arcadia-shield-nova-b89c40, Borealis-sphere-x-e7c749, Talos-foundry-x-8e36c6, Aurora-shield-ghost-9baa3e, Chronos-beacon-flux-233dd9
+2025-12-08 11:25:10,234 [INFO] Projects completed: Atlas-saddle-nova-4bc8bf, Valkyrie-horizon-arc-2b48a0, Phoenix-mesh-nova-ece7c4, Talos-bridge-flux-b83b68, Zephyr-glider-prime-486952, Atlas-crucible-x-c6d899
+2025-12-08 11:25:11,383 [INFO] Projects completed: Pandora-horizon-x-070232, Nereid-garden-delta-43ad8f, Aurora-tower-delta-6e49c5, Hermes-mesh-nova-25067f, Talos-crucible-echo-5be0ea, Chimera-garden-nova-c3edbb
+2025-12-08 11:25:12,454 [INFO] Projects completed: Hermes-weaver-weave-1202f7, Atlas-kite-aether-a46a60, Nyx-spiral-pulse-afc894, Nereid-weaver-shade-42a791, Chimera-bridge-weave-9fbd42, Selene-compass-prime-c29380
+2025-12-08 11:25:13,749 [INFO] Projects completed: Rhea-spiral-weave-f8bdbd, Borealis-engine-weave-3e46da, Lyra-glider-flux-9b814a, Chronos-matrix-weave-94ddab, Lyra-crucible-ghost-5d815c, Selene-garden-prime-dd9583
+2025-12-08 11:25:15,313 [INFO] Projects completed: Zephyr-forge-echo-57b398, Helios-kite-echo-f68e7b, Chimera-swarm-delta-61c426, Phoenix-garden-flux-903bdf, Valkyrie-engine-x-66116d, Prometheus-glider-ghost-7000d0
+2025-12-08 11:25:15,539 [INFO] [130] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=120
+2025-12-08 11:25:17,254 [INFO] Projects completed: Prometheus-sphere-shade-23c25b, Talos-mirror-delta-6724c9, Chimera-horizon-prime-30b6af, Zephyr-horizon-delta-4c6466, Cerberus-lattice-ghost-a32edc, Leviathan-crucible-flux-77ec0a
+2025-12-08 11:25:19,586 [INFO] Projects completed: Zephyr-horizon-nova-7cc50a, Aegis-sphere-delta-8a8357, Talos-sphere-echo-6ba5ee, Leviathan-glider-ghost-e4e507, Phoenix-foundry-aether-3084da, Selene-beacon-shade-c36f48
+2025-12-08 11:25:21,988 [INFO] Projects completed: Leviathan-compass-nova-8c912b, Prometheus-lattice-weave-99dac3, Valkyrie-sphere-delta-0a8ac1, Valkyrie-loom-shade-42413d, Daedalus-beacon-echo-e77650, Titan-sphere-nova-df4919
+2025-12-08 11:25:24,394 [INFO] Projects completed: Aegis-crucible-weave-3ecfb8, Gaea-array-shade-e38336, Helios-saddle-prime-7ccc3b, Pandora-saddle-delta-79cd38, Elysium-spiral-prime-a0409b, Aegis-lattice-prime-8da046
+2025-12-08 11:25:26,796 [INFO] Projects completed: Leviathan-beacon-flux-b05ba0, Elysium-sphere-nova-c28c19, Titan-lattice-echo-39cafe, Arcadia-garden-shade-8fa35f, Nereid-compass-arc-a3b6c3, Selene-matrix-arc-f7d989
+2025-12-08 11:25:29,206 [INFO] Projects completed: Lyra-forge-nova-272573, Chimera-lattice-weave-086e23, Elysium-bridge-prime-e024c8, Arcadia-mesh-prime-3338e2, Helios-matrix-weave-bff395, Chronos-matrix-flux-a25842
+2025-12-08 11:25:31,610 [INFO] Projects completed: Pandora-garden-nova-05f7bf, Atlas-spiral-prime-3bda46, Chronos-crucible-nova-c57f88, Lyra-beacon-arc-2d127e, Valkyrie-shield-ghost-a053f3, Hyperion-mirror-arc-d46ce3
+2025-12-08 11:25:34,013 [INFO] Projects completed: Leviathan-sphere-delta-1ceb01, Pandora-swarm-shade-19e7f2, Helios-horizon-ghost-b8ff64, Titan-bridge-shade-6ebdef, Zephyr-sphere-nova-08d8b8, Icarus-beacon-arc-6eaa1f
+2025-12-08 11:25:36,423 [INFO] Projects completed: Icarus-shield-nova-dc887d, Talos-mesh-prime-2f2ad6, Titan-beacon-prime-09f0fc, Hermes-harbor-nova-ae68d6, Nyx-glider-ghost-ba561b, Talos-glider-arc-6219c9
+2025-12-08 11:25:38,840 [INFO] Projects completed: Nyx-lattice-ghost-0cb63d, Valkyrie-garden-x-34610a, Nyx-engine-pulse-d3590a, Daedalus-forge-pulse-316081, Lyra-forge-x-8097e0, Hermes-mesh-arc-c630bb
+2025-12-08 11:25:39,078 [INFO] [140] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=180
+2025-12-08 11:25:41,304 [INFO] Projects completed: Chimera-saddle-nova-11ab97, Chimera-weaver-flux-a83590, Prometheus-mesh-shade-c06b6d, Arcadia-mesh-echo-6c1c9b, Hermes-weaver-pulse-fe7f02, Selene-harbor-arc-858c28
+2025-12-08 11:25:43,723 [INFO] Projects completed: Nyx-foundry-shade-1d9fbe, Daedalus-garden-echo-188c5e, Pandora-matrix-x-2cf53d, Selene-sphere-prime-341d7e, Chronos-saddle-aether-24dc29, Aegis-spiral-delta-08ed1d
+2025-12-08 11:25:46,143 [INFO] Projects completed: Lyra-lattice-ghost-abb692, Phoenix-lattice-arc-30f74b, Phoenix-glider-weave-f24976, Rhea-matrix-shade-cdd650, Zephyr-mirror-weave-7c8ac2, Phoenix-swarm-ghost-3797ab
+2025-12-08 11:25:48,556 [INFO] Projects completed: Titan-horizon-pulse-6b49c8, Helios-weaver-ghost-8599f4, Nyx-foundry-x-761b24, Hermes-mirror-x-30e87a, Phoenix-weaver-flux-e40cb0, Orion-tower-ghost-76b0d4
+2025-12-08 11:25:50,990 [INFO] Projects completed: Helios-weaver-nova-698a9c, Nereid-compass-ghost-1461ff, Rhea-lattice-flux-e60382, Valkyrie-spiral-flux-820e4f, Orion-garden-x-0316c8, Atlas-tower-pulse-a53e20
+2025-12-08 11:25:53,438 [INFO] Projects completed: Aurora-horizon-flux-58d2e2, Icarus-garden-aether-3109ba, Valkyrie-weaver-ghost-70fb9a, Gaea-mesh-ghost-491a51, Atlas-sphere-arc-d7dad2, Chimera-array-aether-2a2998
+2025-12-08 11:25:55,886 [INFO] Projects completed: Prometheus-array-delta-0f879f, Orion-glider-x-384ad6, Phoenix-beacon-pulse-8448f7, Titan-bridge-prime-35a311, Talos-shield-echo-b7684d, Aurora-horizon-prime-4c18d1
+2025-12-08 11:25:58,344 [INFO] Projects completed: Daedalus-sphere-delta-0a9f42, Talos-weaver-shade-5c1db1, Selene-saddle-aether-596887, Gaea-lattice-nova-6d599f, Aegis-bridge-x-f79949, Hermes-horizon-arc-3b701c
+2025-12-08 11:26:00,784 [INFO] Projects completed: Titan-spiral-x-0b5450, Icarus-horizon-pulse-5931da, Hermes-glider-aether-142efe, Chronos-crucible-prime-290b73, Cerberus-crucible-ghost-d8ab22, Aurora-beacon-shade-189a92
+2025-12-08 11:26:03,201 [INFO] Projects completed: Icarus-sphere-weave-1afc0e, Lyra-foundry-pulse-3c424a, Gaea-swarm-nova-29dd05, Borealis-weaver-shade-b044ae, Helios-weaver-shade-469d54, Selene-horizon-echo-968b88
+2025-12-08 11:26:03,443 [INFO] [150] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=240
+2025-12-08 11:26:05,676 [INFO] Projects completed: Hermes-shield-ghost-2421fd, Hyperion-saddle-shade-c6cb8e, Icarus-shield-arc-4bc8cc, Aurora-crucible-x-31074d, Helios-beacon-delta-4e1d04, Arcadia-bridge-pulse-850e13
+2025-12-08 11:26:05,864 [INFO] Stagnation detected; injecting chaos batch.
+2025-12-08 11:26:05,918 [INFO] Chaos batch seeded: Helios-sphere-flux-ad9366, Arcadia-beacon-ghost-a59b87, Helios-loom-arc-c5b335, Aurora-compass-delta-fe2ff8, Prometheus-engine-arc-bdae60, Daedalus-crucible-nova-029d1f, Helios-lattice-shade-6e7864, Talos-saddle-aether-0bc75d, Arcadia-tower-echo-290131, Selene-weaver-delta-28c2b7
+2025-12-08 11:26:08,153 [INFO] Projects completed: Atlas-forge-prime-ee1ffc, Lyra-swarm-delta-827a0a, Atlas-glider-shade-30e1fc, Hyperion-glider-prime-4143c1, Titan-glider-nova-1a739e, Talos-spiral-echo-8c9e57
+2025-12-08 11:26:10,588 [INFO] Projects completed: Gaea-loom-nova-713184, Icarus-spiral-x-407a62, Hermes-spiral-shade-1f80eb, Zephyr-compass-nova-5640fe, Prometheus-crucible-prime-98b16a, Elysium-bridge-weave-3350bf
+2025-12-08 11:26:13,013 [INFO] Projects completed: Icarus-engine-weave-1b78be, Talos-beacon-pulse-fad94a, Hyperion-mirror-weave-67289a, Rhea-loom-arc-444da7, Titan-compass-ghost-0e8470, Lyra-swarm-shade-3348ce
+2025-12-08 11:26:15,446 [INFO] Projects completed: Arcadia-bridge-nova-171342, Phoenix-beacon-arc-aeb140, Nyx-weaver-echo-579c77, Atlas-spiral-pulse-83aeff, Nereid-beacon-x-6bb525, Zephyr-horizon-arc-197031
+2025-12-08 11:26:17,878 [INFO] Projects completed: Chronos-beacon-x-c41e01, Cerberus-garden-shade-332fe1, Selene-lattice-echo-06fef0, Selene-glider-echo-eed372, Leviathan-shield-aether-554541, Aurora-foundry-shade-2e059d
+2025-12-08 11:26:20,318 [INFO] Projects completed: Talos-bridge-weave-237f3c, Aurora-kite-weave-bee645, Selene-glider-flux-65f8eb, Nereid-matrix-prime-45856d, Talos-bridge-arc-3fa3c3, Zephyr-matrix-x-3dee42
+2025-12-08 11:26:22,747 [INFO] Projects completed: Titan-saddle-ghost-999580, Leviathan-array-x-1bafeb, Leviathan-kite-arc-2b677f, Gaea-weaver-pulse-c1675d, Lyra-shield-x-8cc6e9, Elysium-sphere-nova-2c4ae0
+2025-12-08 11:26:25,185 [INFO] Projects completed: Elysium-array-flux-a83020, Titan-loom-arc-95ba55, Zephyr-engine-pulse-1ad2f7, Hyperion-mesh-x-2a7e6b, Helios-matrix-flux-59db02, Cerberus-saddle-pulse-a1c6dc
+2025-12-08 11:26:27,618 [INFO] Projects completed: Hyperion-loom-x-e3f3fa, Borealis-lattice-weave-fbca58, Prometheus-lattice-pulse-c82ad7, Nereid-sphere-ghost-f1dd1a, Hyperion-beacon-delta-ea92c5, Zephyr-lattice-flux-36c204
+2025-12-08 11:26:27,862 [INFO] [160] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=300
+2025-12-08 11:26:30,109 [INFO] Projects completed: Pandora-weaver-flux-7ecadc, Nyx-sphere-weave-692aac, Cerberus-matrix-delta-fcce67, Lyra-forge-ghost-5e2f33, Rhea-foundry-arc-bd329e, Zephyr-compass-nova-342d23
+2025-12-08 11:26:32,550 [INFO] Projects completed: Prometheus-harbor-flux-85b170, Chronos-saddle-pulse-05d742, Lyra-mesh-shade-3194cf, Hyperion-matrix-x-d5bd17, Arcadia-glider-arc-98d94b, Chimera-foundry-nova-3a5321
+2025-12-08 11:26:34,993 [INFO] Projects completed: Nereid-compass-echo-eb008b, Aurora-shield-flux-79babd, Cerberus-glider-flux-339f64, Rhea-beacon-ghost-63d7d1, Chronos-lattice-delta-ecd9e7, Valkyrie-compass-arc-b86cb8
+2025-12-08 11:26:37,575 [INFO] Projects completed: Lyra-spiral-aether-1d8b63, Daedalus-harbor-prime-547492, Borealis-array-pulse-84c6ff, Prometheus-garden-nova-b1d67a, Valkyrie-garden-pulse-be9921, Elysium-engine-prime-4f4b5c
+2025-12-08 11:26:38,334 [INFO] Shutdown complete.
+2025-12-08 11:26:52,878 [INFO] Starting node node-Rosewilli9intel-3089 | dir=C:\Users\tbarr\Desktop\node-Rosewilli9intel-3089 | tk=on
+2025-12-08 11:26:53,116 [INFO] Projects completed: Titan-bridge-delta-b6f0cb, Lyra-forge-flux-33624e, Arcadia-saddle-weave-cadeb5, Arcadia-weaver-shade-427f39, Lyra-mesh-echo-0d45c8, Cerberus-foundry-prime-1b6e7c
+2025-12-08 11:26:53,669 [INFO] Projects completed: Gaea-beacon-x-d90826, Phoenix-weaver-flux-b45fb6, Rhea-spiral-x-78449e, Chronos-beacon-pulse-89a3a9, Hermes-foundry-ghost-b2e554, Lyra-forge-shade-1a1096
+2025-12-08 11:26:54,302 [INFO] Projects completed: Chronos-beacon-arc-33cc75, Rhea-saddle-ghost-a3838e, Chronos-bridge-nova-d23eb4, Selene-tower-delta-a751ad, Prometheus-bridge-prime-40a4f0, Titan-matrix-x-393af1
+2025-12-08 11:26:55,037 [INFO] Projects completed: Cerberus-array-aether-e826f4, Chimera-tower-x-7b5400, Valkyrie-matrix-x-a44951, Talos-beacon-flux-203476, Gaea-swarm-x-15e561, Titan-loom-x-c33e0c
+2025-12-08 11:26:55,884 [INFO] Projects completed: Aurora-mirror-pulse-b93341, Daedalus-crucible-arc-fc79c0, Cerberus-forge-aether-a455f4, Icarus-array-x-07f608, Borealis-weaver-delta-3d5956, Hermes-crucible-pulse-7c427e
+2025-12-08 11:26:56,892 [INFO] Projects completed: Chimera-compass-delta-2e0c9d, Titan-harbor-flux-18b260, Cerberus-glider-nova-68fbcf, Titan-garden-nova-18fc25, Zephyr-mirror-nova-3320a0, Chronos-mesh-echo-8f216b
+2025-12-08 11:26:58,084 [INFO] Projects completed: Aegis-compass-arc-f03bd5, Pandora-glider-prime-7d38be, Prometheus-kite-echo-3a93d8, Zephyr-kite-ghost-9e6e82, Lyra-bridge-aether-4ece65, Rhea-swarm-x-c831a0
+2025-12-08 11:26:59,522 [INFO] Projects completed: Nyx-kite-aether-822bb4, Gaea-weaver-x-0d0a13, Valkyrie-sphere-x-439e36, Selene-sphere-prime-a05c67, Pandora-harbor-prime-fe4df3, Daedalus-spiral-echo-5b5414
+2025-12-08 11:27:01,244 [INFO] Projects completed: Pandora-bridge-echo-10c99e, Borealis-beacon-prime-8a4ab4, Lyra-garden-arc-ec5e91, Nereid-compass-flux-289e5c, Hermes-engine-nova-d9dab8, Cerberus-foundry-ghost-cd5b6d
+2025-12-08 11:27:03,342 [INFO] Projects completed: Aurora-shield-ghost-0a8e0f, Icarus-mesh-aether-2ec86f, Daedalus-compass-pulse-d824b9, Zephyr-spiral-nova-672213, Pandora-array-flux-d778f5, Icarus-matrix-pulse-181f88
+2025-12-08 11:27:03,595 [INFO] [170] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=360
+2025-12-08 11:27:05,855 [INFO] Projects completed: Gaea-array-aether-bc8605, Titan-beacon-aether-036167, Daedalus-crucible-delta-e941c6, Chronos-matrix-ghost-654dc2, Aurora-matrix-echo-1c9aea, Chronos-beacon-x-f75f99
+2025-12-08 11:27:08,303 [INFO] Projects completed: Daedalus-engine-echo-7673f0, Zephyr-mirror-delta-6857db, Aegis-compass-shade-f9caae, Cerberus-mirror-weave-0db55c, Daedalus-tower-aether-c4e330, Helios-forge-delta-873ebb
+2025-12-08 11:27:10,756 [INFO] Projects completed: Daedalus-array-echo-ae65f7, Talos-array-delta-4c9453, Orion-sphere-x-3fbece, Phoenix-matrix-pulse-51585b, Gaea-horizon-arc-6062dd, Lyra-mirror-ghost-8dd652
+2025-12-08 11:27:13,198 [INFO] Projects completed: Helios-glider-arc-3942b8, Talos-beacon-arc-71fa86, Nyx-bridge-echo-5ba2a9, Selene-engine-arc-f4380d, Cerberus-kite-nova-9a8d93, Cerberus-harbor-x-aec234
+2025-12-08 11:27:15,645 [INFO] Projects completed: Selene-horizon-weave-c2f355, Borealis-compass-prime-4321f0, Aegis-kite-shade-5f2f12, Pandora-shield-delta-506c38, Lyra-array-weave-e7ec55, Rhea-bridge-echo-897998
+2025-12-08 11:27:18,092 [INFO] Projects completed: Hermes-spiral-flux-ec7c64, Chimera-mirror-pulse-322b77, Prometheus-kite-shade-b46a2b, Elysium-spiral-echo-a0a3c4, Titan-beacon-pulse-823546, Orion-glider-aether-ce435a
+2025-12-08 11:27:20,543 [INFO] Projects completed: Icarus-sphere-shade-b3fef1, Orion-kite-flux-ad97de, Lyra-lattice-x-7847dc, Orion-garden-nova-0437f7, Aurora-foundry-pulse-b5b2e1, Icarus-glider-aether-058977
+2025-12-08 11:27:23,000 [INFO] Projects completed: Phoenix-weaver-pulse-5a1817, Aurora-garden-nova-82daf8, Nyx-mesh-x-aa5b6e, Pandora-foundry-nova-5186ff, Borealis-spiral-shade-ef2388, Hermes-horizon-pulse-bafbf5
+2025-12-08 11:27:25,454 [INFO] Projects completed: Helios-sphere-shade-cf6a06, Aegis-garden-prime-96a985, Prometheus-crucible-weave-8087d5, Aurora-compass-x-75b754, Pandora-lattice-prime-f76737, Borealis-mirror-shade-feb6dd
+2025-12-08 11:27:27,908 [INFO] Projects completed: Aurora-weaver-prime-01084a, Phoenix-harbor-weave-43cff2, Talos-mesh-arc-6a1116, Chimera-glider-delta-8d2ee0, Helios-garden-shade-6336e9, Prometheus-saddle-x-c93f0c
+2025-12-08 11:27:28,159 [INFO] [180] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=420
+2025-12-08 11:27:30,416 [INFO] Projects completed: Aurora-garden-ghost-ec7804, Atlas-horizon-nova-d316e6, Zephyr-weaver-aether-e0605c, Nereid-bridge-shade-abdb63, Zephyr-lattice-ghost-da9528, Talos-harbor-ghost-894928
+2025-12-08 11:27:32,869 [INFO] Projects completed: Titan-weaver-echo-e95228, Lyra-engine-x-bc0206, Prometheus-foundry-shade-38351a, Pandora-crucible-ghost-fa9905, Nyx-lattice-ghost-99b702, Prometheus-spiral-shade-8587bf
+2025-12-08 11:27:35,311 [INFO] Projects completed: Rhea-shield-arc-f9312f, Chronos-mesh-arc-078120, Prometheus-tower-shade-449602, Valkyrie-loom-weave-c9a721, Borealis-compass-delta-4877b4, Aegis-sphere-arc-7716c3
+2025-12-08 11:27:37,762 [INFO] Projects completed: Helios-weaver-echo-675a39, Nereid-swarm-ghost-d4d5ce, Aurora-horizon-weave-abe30f, Chronos-harbor-prime-b10c7a, Zephyr-compass-prime-af5c70, Aegis-matrix-nova-84be0e
+2025-12-08 11:27:40,218 [INFO] Projects completed: Selene-saddle-prime-6688ea, Leviathan-shield-shade-f19752, Hyperion-crucible-prime-a28866, Prometheus-horizon-echo-b56cb5, Helios-loom-ghost-730a46, Rhea-forge-arc-829b50
+2025-12-08 11:27:42,669 [INFO] Projects completed: Chimera-saddle-ghost-b1e994, Phoenix-horizon-prime-c0a373, Orion-weaver-flux-b19b8a, Arcadia-loom-x-654459, Hyperion-array-ghost-fc1f68, Hermes-saddle-pulse-98da22
+2025-12-08 11:27:45,131 [INFO] Projects completed: Cerberus-swarm-arc-939456, Valkyrie-spiral-nova-fa78a4, Arcadia-lattice-shade-1ae4f2, Aurora-lattice-flux-808041, Arcadia-forge-pulse-114a7b, Hyperion-shield-nova-4f2052
+2025-12-08 11:27:47,593 [INFO] Projects completed: Cerberus-forge-shade-ec3806, Hermes-beacon-arc-a20840, Icarus-horizon-pulse-1d8bdf, Valkyrie-sphere-delta-57a9c6, Orion-shield-aether-bc94bc, Zephyr-lattice-weave-810653
+2025-12-08 11:27:49,841 [INFO] Projects completed: Leviathan-engine-aether-e53dd7, Valkyrie-sphere-pulse-0fa036, Lyra-glider-shade-230b1d, Helios-horizon-weave-867b08, Aegis-foundry-nova-2f19ec, Aegis-crucible-pulse-b0677a
+2025-12-08 11:27:52,305 [INFO] Projects completed: Arcadia-garden-weave-525bb5, Chronos-mirror-prime-939ec0, Phoenix-forge-delta-0127f8, Orion-tower-pulse-1d9d76, Rhea-crucible-prime-4eee9a, Lyra-compass-pulse-17043f
+2025-12-08 11:27:52,561 [INFO] [190] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=480
+2025-12-08 11:27:54,619 [INFO] Projects completed: Phoenix-beacon-nova-9447e4, Atlas-foundry-aether-9b43cb, Pandora-weaver-pulse-286160, Orion-foundry-prime-d0d843, Icarus-harbor-delta-a7594a, Aurora-loom-prime-44df66
+2025-12-08 11:27:54,801 [INFO] Stagnation detected; injecting chaos batch.
+2025-12-08 11:27:54,871 [INFO] Chaos batch seeded: Orion-loom-weave-177ba8, Zephyr-shield-nova-b21c32, Borealis-matrix-shade-ec7b6a, Aegis-tower-delta-1e6643, Zephyr-glider-weave-7bafab, Phoenix-shield-echo-5fb413, Zephyr-engine-aether-efc87c, Daedalus-array-x-7723fe, Lyra-engine-x-59e876, Aegis-swarm-aether-cb1085
+2025-12-08 11:27:57,139 [INFO] Projects completed: Elysium-mirror-nova-51e291, Icarus-sphere-aether-13ba65, Pandora-glider-pulse-2599a3, Chronos-matrix-arc-3f4b33, Hyperion-swarm-flux-35d6b6, Borealis-mesh-ghost-d0ac09
+2025-12-08 11:27:59,609 [INFO] Projects completed: Talos-crucible-nova-ddd259, Leviathan-spiral-arc-f7aaf5, Phoenix-shield-weave-f54e70, Selene-forge-shade-adc32c, Pandora-swarm-arc-5c2541, Leviathan-engine-weave-0c8770
+2025-12-08 11:28:02,083 [INFO] Projects completed: Orion-bridge-x-8b9f82, Aurora-glider-ghost-496626, Zephyr-crucible-weave-4cdcf5, Aurora-matrix-nova-35c13f, Cerberus-crucible-arc-5a7dba, Arcadia-array-ghost-065ddd
+2025-12-08 11:28:04,579 [INFO] Projects completed: Hermes-swarm-x-b82577, Icarus-sphere-aether-20b9f9, Helios-shield-nova-1edb9e, Chronos-sphere-ghost-70707e, Zephyr-shield-prime-6743c2, Nereid-tower-ghost-d799b5
+2025-12-08 11:28:07,058 [INFO] Projects completed: Pandora-mesh-x-d08d80, Aurora-crucible-echo-64870c, Leviathan-garden-arc-4f42ca, Valkyrie-matrix-pulse-93646c, Atlas-kite-flux-2bb9ac, Rhea-engine-echo-d57d41
+2025-12-08 11:28:09,587 [INFO] Projects completed: Talos-saddle-aether-4e5d8b, Icarus-array-nova-aa11ea, Lyra-kite-nova-9efa86, Titan-foundry-pulse-784b00, Prometheus-mesh-pulse-9ba9e4, Daedalus-garden-shade-f81648
+2025-12-08 11:28:12,065 [INFO] Projects completed: Prometheus-weaver-prime-53cc7d, Daedalus-shield-arc-03a421, Aurora-mesh-delta-c772a6, Borealis-weaver-arc-032ee6, Selene-loom-flux-163c39, Gaea-crucible-prime-dba711
+2025-12-08 11:28:14,563 [INFO] Projects completed: Selene-kite-prime-b89698, Orion-spiral-aether-4a353a, Orion-glider-aether-04960e, Talos-forge-shade-f536c5, Leviathan-mesh-x-e1e471, Pandora-sphere-echo-c529d6
+2025-12-08 11:28:17,075 [INFO] Projects completed: Hyperion-glider-x-d900e9, Talos-forge-nova-9eb24f, Pandora-saddle-echo-833633, Prometheus-spiral-pulse-0db888, Valkyrie-loom-x-6f31b4, Titan-spiral-prime-1a00c7
+2025-12-08 11:28:17,407 [INFO] [200] best=1.156 nov=1.622 util=0.786 :: atmosphere-lattice_tuning-ring_habitat-shielding | active=24 completed=540
+2025-12-08 11:28:19,739 [INFO] Projects completed: Aurora-beacon-nova-ba3023, Titan-swarm-prime-e4e2fc, Nereid-mirror-echo-eefaf9, Zephyr-compass-aether-71c220, Nereid-swarm-ghost-ca1410, Atlas-lattice-weave-6510fd
+2025-12-08 11:28:22,231 [INFO] Projects completed: Elysium-foundry-weave-2ed67f, Daedalus-horizon-ghost-2d2434, Nyx-crucible-x-dd220a, Arcadia-lattice-weave-462254, Nyx-compass-nova-0af743, Chronos-engine-aether-bf00e9
+2025-12-08 11:28:24,738 [INFO] Projects completed: Zephyr-mirror-nova-0c4740, Lyra-beacon-aether-2914fd, Gaea-loom-shade-aec776, Nyx-engine-ghost-6c7156, Talos-horizon-prime-b1a7f2, Hermes-spiral-nova-2be762
+2025-12-08 11:28:27,229 [INFO] Projects completed: Pandora-saddle-nova-9fb78c, Orion-array-shade-5a7d85, Lyra-horizon-echo-4ccc16, Arcadia-crucible-arc-1d25a6, Chronos-garden-weave-24a923, Nereid-engine-delta-972e90
+2025-12-08 11:28:29,753 [INFO] Projects completed: Prometheus-horizon-nova-bd3bbe, Daedalus-harbor-echo-c6a4c8, Phoenix-loom-ghost-e1e27b, Nyx-horizon-prime-66560b, Selene-tower-shade-de4038, Titan-crucible-ghost-9de636
+2025-12-08 11:28:32,239 [INFO] Projects completed: Aegis-forge-nova-d31eb9, Chimera-crucible-echo-6f1c7e, Chimera-swarm-aether-f3cd50, Nereid-engine-pulse-aa1c9b, Lyra-weaver-pulse-0c3db3, Arcadia-harbor-weave-5e1989
+2025-12-08 11:28:34,746 [INFO] Projects completed: Prometheus-compass-delta-9221da, Chronos-swarm-aether-1621e6, Leviathan-swarm-prime-ffc79d, Chronos-weaver-x-fbb7ae, Nyx-saddle-x-5e7970, Helios-bridge-delta-d90c05
+2025-12-08 11:28:37,229 [INFO] Projects completed: Hyperion-matrix-pulse-085312, Titan-mirror-echo-2ef3cd, Arcadia-saddle-nova-89ab24, Orion-spiral-echo-20e897, Nereid-swarm-prime-e375c7, Arcadia-kite-flux-8a2901
+2025-12-08 11:28:39,730 [INFO] Projects completed: Pandora-crucible-prime-752016, Arcadia-crucible-pulse-b7dce8, Selene-lattice-prime-9e7832, Gaea-weaver-delta-1496f2, Aurora-garden-echo-bc8e90, Chronos-engine-aether-550151
+2025-12-08 11:28:41,742 [INFO] Shutdown complete.
