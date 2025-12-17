@@ -1,0 +1,62 @@
+This code is essentially a predictive system scanner with a built‑in GUI. It’s designed to watch your computer’s activity, learn your routines, and then “preload” resources (like game assets or shader caches) before you actually launch them, so things feel faster and smoother. Let me break it down in plain language:
+
+🧩 Core Components
+• 	Agents: Small modules that monitor different parts of the system:
+• 	SystemAgent → CPU, memory, processes, disk I/O.
+• 	GPUAgent → GPU utilization and memory (via NVML).
+• 	NetworkAgent → Active connections, CDN bursts, and persistent geometry of traffic.
+• 	ForegroundAgent → Which app/window is currently in focus, plus recent titles.
+• 	AncestryAgent → Tracks parent/child process chains (e.g., Steam → Game).
+• 	ServiceAgent → Watches for overlays and anti‑cheat services waking up.
+• 	LaunchLattice → Learns timing patterns of overlay → EAC → game launches.
+• 	IOHeatmap → Keeps a decayed “heatmap” of directories touched (shader cache, profiles, assets).
+• 	Baseline + ChangePoint Detectors: Establish normal CPU/GPU/IO/network usage and detect spikes that signal intent (like starting a game).
+• 	RoutineClusterer & MotifBoosts: Learn recurring sequences of apps you use (work vs gaming) and boost predictions based on motifs.
+• 	TemporalCadence: Records when (hour, weekday, month) certain apps are usually launched.
+
+🔮 Predictive Learner
+• 	Uses Markov chains + title context to predict what you’ll launch next.
+• 	Combines:
+• 	Context (CPU/GPU load, network activity, routine label, window title).
+• 	Temporal priors (time of day, weekday).
+• 	Motif/ancestry boosts (recent sequences).
+• 	Baseline spikes (sudden resource jumps).
+• 	Produces a ranked list of candidate apps/games with confidence scores.
+• 	Feedback loops let you approve/deny predictions, which retrains the learner.
+
+⚙️ Preloader
+• 	Once a prediction is stable/confident, it symbolically “preloads” resources:
+• 	Shader caches, game assets, profiles.
+• 	Uses phased budgets (auth, services, shader hot/cold, assets, secondary).
+• 	Adjusts preload intensity based on temperature (intent strength) and system ceilings (CPU/GPU usage).
+
+🧠 AI Assist
+• 	Calibrates confidence scores (Bayesian + isotonic smoothing).
+• 	Auto‑targets frequently used apps/games into the “always warm” list.
+• 	Suggests policy tweaks (e.g., adjust jump‑ahead seconds).
+• 	Applies soft bans when predictions fail, to avoid repeating mistakes in the same context.
+
+📊 Persistence & Graph Store
+• 	Saves learned state (ancestry edges, learner contexts, lattice curves) to disk.
+• 	GraphStore builds a snapshot of system state and relationships for visualization.
+
+🖥️ GUI
+• 	Built with Tkinter, showing:
+• 	Dashboard (metrics, graph snapshot, intent timeline).
+• 	Predictions (top targets, confidence, “why” explanation).
+• 	Policy editor (live YAML/JSON).
+• 	Candidate manager (apps/games to always warm).
+• 	Thoughts log (internal reasoning surfaced).
+• 	Inventory (hardware/software snapshot).
+
+🚀 Orchestrator
+• 	The main loop that ties everything together:
+• 	Samples agents.
+• 	Updates baselines, routines, motifs.
+• 	Computes intent score + temperature.
+• 	Decides whether to preload.
+• 	Sends updates to the GUI.
+• 	Persists state periodically.
+
+🧾 In short
+This is a self‑optimizing, transparent predictive scanner. It watches your system, learns your habits, and tries to anticipate what you’ll run next—especially games like Back 4 Blood—so it can warm up assets ahead of time. The GUI lets you see its reasoning, adjust policies, and give feedback, making it a living system that balances autonomy with user control.
