@@ -1,0 +1,94 @@
+Got it — let me walk you through what this scaffold actually does, piece by piece, so you can see the whole picture in plain language rather than just staring at thousands of lines of Python.
+
+Big Picture
+This is a self‑optimizing system called “Fortune Teller”. It’s designed to run on your machine, watch what you do (CPU, memory, network, input activity, processes), and then predict what you’re about to want next — like opening your email, launching Steam, or firing up your IDE. It doesn’t just guess: it learns patterns, applies reinforcement, and adapts over time. It also has a GUI so you can see its reasoning transparently.
+
+Core Components
+• 	CryptoManager
+Handles per‑machine encryption. All logs, memory, and patch records are sealed with AES‑GCM derived from your hardware fingerprint. That way, only your computer can decrypt its own data.
+• 	MemoryManager
+Stores learned weights, transitions, history, and accuracy. It tracks both global accuracy and per‑intent accuracy. It also remembers user feedback (promote/suppress certain actions).
+• 	Logger
+Collects events and flushes them to encrypted log files. Every decision, prediction, or error gets logged with a signature.
+• 	InputMonitor
+Watches mouse and keyboard activity. It calculates cadence (how fast you’re typing or moving the mouse) and whether you’re active. This feeds into prediction.
+• 	ActivityAnalyzer
+Measures disk and network throughput. It classifies your current status as idle, browsing, gaming, or transferring files based on bandwidth and connections.
+• 	TelemetryCollector
+Pulls everything together: CPU, memory, GPU, battery, input, activity, and processes. It also infers a persona (Work, Gaming, Browsing, Idle) based on what’s running and how you’re interacting.
+• 	CapabilityProfiler
+Rates your system’s capacity (CPU, GPU, memory, disk, network, power). This influences how heavy a preload plan can be.
+• 	PortScanner & NetworkScanner
+Look at active connections, USB devices, and LAN peers. The network scanner can aggregate capabilities across devices.
+
+Prediction Engine
+This is the heart:
+• 	Predictor
+Combines multiple signals:
+• 	Base weights (learned preferences)
+• 	Time bias (hour/day patterns)
+• 	Markov bias (what usually follows what)
+• 	N‑gram bias (2‑ and 3‑step sequences with decay)
+• 	Input bias (keyboard/mouse cadence)
+• 	Drive/net bias (network status, disk activity)
+• 	Persona bias (Work/Gaming/Browsing context)
+• 	Feedback bias (user promote/suppress)
+• 	Novelty boost (encourages diversity)
+• 	Cooldown penalty (prevents spamming one intent)
+• 	Rhythm bias (time‑of‑day ranges)
+• 	Per‑intent accuracy bias (trusts intents that have been accurate)
+• 	Bandit bias (Thompson sampling style exploration/exploitation)
+• 	It then calibrates scores with softmax and a Platt‑style sigmoid, normalizes them, and picks top intents with diversity across clusters.
+
+Planning & Execution
+• 	DependencyGraph
+Knows what bundles depend on what (e.g., Browser needs DNSCache, TLSStack, Extensions).
+• 	Planner
+Takes predicted intents and builds a preload plan. Persona influences cost/gain shaping (lighter preloads for Work, heavier GPU preloads for Gaming).
+• 	PolicyEngine
+Checks if a plan is allowed (CPU/disk/vRAM limits, quiet hours, privacy scopes). Decides whether to execute or defer.
+• 	AutoLoader
+Executes preload plans with strategies (disk_prefetch, gpu_vram_staging, balanced). Verifies dependencies with hashes.
+
+Self‑Improvement
+• 	SelfImprover
+Proposes patches based on signals (serialization errors, policy deferrals, GPU stalls). Applies them safely:
+• 	Backs up files
+• 	Encrypts patch logs
+• 	Runs lint/tests/sandbox import
+• 	Rolls back if anything fails
+• 	Bumps version number
+
+Orchestration & GUI
+• 	Orchestrator
+Runs the autonomy loop: snapshot → predict → plan → policy → execute/defer → learn → self‑improve daily.
+• 	GUIManager
+Tkinter interface showing:
+• 	Predictions with evidence (biases, persona, bandit mean, cooldown, accuracy)
+• 	Plans and policy decisions
+• 	Resource telemetry
+• 	Ports/USB devices
+• 	Network peers
+• 	Logs
+• 	Feedback controls (promote/suppress intents)
+
+Flow of Operation
+1. 	Telemetry collects system state and persona.
+2. 	Predictor scores possible actions using all biases.
+3. 	Planner builds preload steps for the top intent.
+4. 	PolicyEngine decides if it’s safe to run.
+5. 	AutoLoader executes preload if allowed.
+6. 	Predictor records outcome, updates weights, transitions, bandit priors, cooldowns, and accuracy.
+7. 	SelfImprover proposes and applies patches daily.
+8. 	GUI shows everything transparently and lets you adjust feedback.
+
+Why It’s “More Predictive”
+The upgrades you asked for are integrated:
+• 	Personas sharpen context awareness.
+• 	N‑gram sequence memory captures rituals.
+• 	Bandit bias balances exploration/exploitation.
+• 	Platt calibration aligns confidence with reality.
+• 	Cooldown and rhythm prevent over‑bias and add time‑of‑day rhythm.
+• 	Per‑intent accuracy bias trusts proven intents.
+
+So in full text: this code is a living, encrypted, transparent, predictive assistant that watches your rhythms, learns your sequences, adapts its confidence, and even rewrites itself safely to get better every day. It’s not just a monitor — it’s an autonomous planner that tries to anticipate your next move and preload resources so your system feels faster and smarter.
