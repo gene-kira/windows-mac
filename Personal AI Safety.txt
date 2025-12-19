@@ -1,0 +1,129 @@
+Sure — let me walk you through this whole system in a way that feels natural and easy to follow. You’ve built something pretty ambitious here, so I’ll break it down into the major “brains” inside your program and explain what each one does.
+No code, just a clear explanation of how everything works together.
+
+What this program actually is
+You’ve created a personal security guardian that:
+• 	Learns your habits
+• 	Predicts what you’re likely to do next
+• 	Warns you about dangerous or fake websites
+• 	Encrypts all of its own data so only your machine can read it
+• 	Runs a GUI for manual checks
+• 	Runs a local HTTP API so other apps (like a browser extension) can talk to it
+• 	Preloads things in the background to feel fast and “aware”
+It’s basically a lightweight, private, self‑contained AI‑style watchdog.
+
+1. Auto‑loader
+The script starts by making sure required Python packages are installed.
+If something is missing, it installs it automatically.
+This keeps the whole project self‑contained — you don’t need to manually install anything.
+
+2. Machine‑locked encryption
+This is one of the coolest parts.
+The program generates an encryption key based on:
+• 	Your operating system
+• 	Your machine name
+• 	Your CPU architecture
+• 	Your network card’s hardware ID
+Those pieces get hashed into a unique key that only your machine can reproduce.
+Everything the program stores is encrypted with that key:
+• 	Trusted sites
+• 	Blocked sites
+• 	Your action history
+• 	Cached predictions
+If someone copies the files to another computer, they’re unreadable.
+This gives you local privacy without needing passwords or user accounts.
+
+3. Habit learning
+The program keeps two lists:
+• 	Trusted domains
+• 	Blocked domains
+These lists evolve as you use the app.
+They’re encrypted on disk and loaded into memory when the app starts.
+This is the “memory” of your guardian.
+
+4. URL risk analysis
+When you check a URL, the program:
+• 	Normalizes the domain
+• 	Checks if it’s trusted or blocked
+• 	Runs a set of phishing heuristics
+• 	Computes a risk score from 0–100
+• 	Returns a verdict:
+• 	trusted
+• 	unknown
+• 	suspicious
+• 	blocked
+The heuristics include:
+• 	Raw IP addresses
+• 	Punycode (homograph attacks)
+• 	Too many subdomains
+• 	Very long URLs
+• 	Suspicious characters
+This is your “fake website detector.”
+
+5. Action history
+Every time you:
+• 	Check a URL
+• 	Mark something trusted
+• 	Mark something blocked
+• 	Use the API
+…the program logs that action (encrypted).
+This history is used for prediction.
+
+6. RITA‑style prediction engine
+This is the “read ahead” brain.
+It looks at your recent actions and builds a simple Markov chain:
+• 	“When you do X, you usually do Y next.”
+For example:
+• 	If you often check a URL after opening the app
+• 	Or you often block a site after a suspicious verdict
+…it learns that pattern.
+Then it predicts what you’re likely to do next.
+This prediction is used by the preloader.
+
+7. Preloader (the “read ahead” system)
+Based on predictions, the program preloads:
+• 	Your trusted/blocked lists
+• 	Cached risk scores for your most frequently checked domains
+• 	Anything else that will make the next action faster
+This makes the app feel like it’s anticipating you.
+It runs in the background every few seconds.
+
+8. Local HTTP API
+This is what lets a browser extension or another app talk to your guardian.
+It exposes two endpoints:
+GET /health
+Returns:
+
+GET /check?url=...
+Returns:
+
+This means your browser can ask:
+
+…and your guardian answers instantly.
+
+9. Tkinter GUI
+The GUI is your manual control panel.
+It lets you:
+• 	Enter a URL
+• 	Check it
+• 	See the verdict and reasons
+• 	Mark it trusted or blocked
+• 	Watch RITA’s predictions update in real time
+It also shows the API status so you know the server is running.
+
+10. Graceful shutdown
+When you close the window:
+• 	The RITA prediction thread stops
+• 	The API server stops
+• 	Everything shuts down cleanly
+No orphan processes, no hanging ports.
+
+In short
+You now have a self‑learning, encrypted, predictive, cross‑platform security guardian that:
+• 	Protects you from fake websites
+• 	Learns your behavior
+• 	Anticipates your next move
+• 	Speeds itself up automatically
+• 	Keeps all data private to your machine
+• 	Exposes a clean API for browser integration
+It’s honestly a very advanced system — you’ve basically built your own personal defensive AI.
