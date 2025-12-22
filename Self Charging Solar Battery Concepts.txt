@@ -1,0 +1,171 @@
+Living Battery: Full Technical and Conceptual Overview
+
+1. System Overview
+
+The living battery is modeled as a multi-organ energy organism composed of two primary internal energy stores: a fast-response membrane layer and a deep-capacity core layer. These organs interact with environmental energy sources, internal metabolic processes, and an AI guardian that regulates bio-engine activity. The system integrates solar harvesting, ambient electromagnetic field capture, and a bio-inspired ion pump to maintain energy levels.
+
+2. Energy Harvesting
+
+2.1 Solar Harvesting
+
+Solar power is harvested through a photoactive layer:
+
+Formula: (P_{pv}(t) = \eta_{pv} \cdot P_{sun}(t))
+
+2.2 Ambient Field Harvesting
+
+Ambient electromagnetic fields contribute additional power:
+
+Formula: (P_{air}(t) = \eta_{air} \cdot P_{field}(t))
+
+2.3 Bio-Engine Harvesting
+
+The bio-engine is an eel-inspired ion pump regulated by the AI guardian:
+
+Formula: (P_{bio}(t) = \eta_{bio} \cdot u_{bio}(t) \cdot \left(1 - \frac{E_{mem}(t) + E_{core}(t)}{E_{mem,max}(t) + E_{core,max}(t)}\right))
+
+2.4 Total Harvested Power
+
+Formula: (P_{harvest}(t) = P_{pv}(t) + P_{air}(t) + P_{bio}(t))
+
+3. Energy Distribution
+
+Harvested power is distributed between the membrane and core:
+
+Membrane: (P_{to,mem}(t) = 0.4 \cdot P_{harvest}(t))
+
+Core: (P_{to,core}(t) = 0.6 \cdot P_{harvest}(t))
+
+4. Internal Organ Energy Flow
+
+4.1 Membrane to Core
+
+Formula: (P_{mem \rightarrow core}(t) = k_{mem \rightarrow core} \cdot E_{mem}(t))
+
+4.2 Core to Membrane
+
+Formula: (P_{core \rightarrow mem}(t) = k_{core \rightarrow mem} \cdot E_{core}(t))
+
+5. Load Handling
+
+5.1 Membrane Load Supply
+
+Formula: (P_{mem \rightarrow load}(t) = \min(P_{load}(t), \frac{E_{mem}(t)}{\Delta t}))
+
+5.2 Core Load Supply
+
+Formula: (P_{core \rightarrow load}(t) = \min(P_{load}(t) - P_{mem \rightarrow load}(t), \frac{E_{core}(t)}{\Delta t}))
+
+5.3 Unmet Load
+
+Formula: (P_{unmet}(t) = P_{load}(t) - P_{mem \rightarrow load}(t) - P_{core \rightarrow load}(t))
+
+6. Losses
+
+6.1 Membrane Losses
+
+Formula: (P_{loss,mem}(t) = k_{loss,mem} \cdot E_{mem}(t))
+
+6.2 Core Losses
+
+Formula: (P_{loss,core}(t) = k_{loss,core} \cdot E_{core}(t))
+
+7. Energy Update Equations
+
+7.1 Membrane Energy Update
+
+Formula: [ \frac{dE_{mem}}{dt} = P_{to,mem} + P_{core \rightarrow mem} - P_{mem \rightarrow core} - P_{mem \rightarrow load} - P_{loss,mem} ]
+
+7.2 Core Energy Update
+
+Formula: [ \frac{dE_{core}}{dt} = P_{to,core} + P_{mem \rightarrow core} - P_{core \rightarrow mem} - P_{core \rightarrow load} - P_{loss,core} ]
+
+8. Temperature Model
+
+Temperature rises with power flow and cools toward ambient:
+
+Formula: [ \frac{dT}{dt} = k_{heat} \cdot |P_{flow,total}| - k_{cool} \cdot (T(t) - T_{ambient}) ]
+
+Where:
+
+(P_{flow,total} = |P_{harvest}| + |P_{mem \rightarrow load}| + |P_{core \rightarrow load}| + |P_{mem \rightarrow core}| + |P_{core \rightarrow mem}|)
+
+9. Health Degradation
+
+Health decreases from baseline aging, high temperature, and high power flow:
+
+Formula: [ \frac{dH}{dt} = -\left(k_{base} + k_{temp} \cdot \max(0, T(t) - (T_{ambient} + 5)) + k_{flow} \cdot |P_{flow,total}|\right) ]
+
+Health clamps to:
+
+Formula: (0 \leq H(t) \leq 1)
+
+Health reduces maximum capacities:
+
+Membrane: (E_{mem,max}(t) = H(t) \cdot E_{mem,max,nominal})
+
+Core: (E_{core,max}(t) = H(t) \cdot E_{core,max,nominal})
+
+10. AI Guardian Bio-Engine Control
+
+The AI guardian determines bio-engine activity:
+
+Formula: [ u_{bio}(t) = \text{clip}\left((1 - \text{fullness}) + \text{bias} - \alpha \cdot \text{temp_excess} - \beta \cdot (1 - H(t))\right) ]
+
+Where:
+
+Fullness: (\frac{E_{mem} + E_{core}}{E_{mem,max} + E_{core,max}})
+
+Temperature Excess: (\max(0, T - (T_{ambient} + 5)))
+
+Bias: User-defined control input
+
+(\alpha, \beta): Guardian weight parameters
+
+11. Discrete Simulation Form
+
+Each simulation step updates the system:
+
+Membrane: (E_{mem}(t + \Delta t) = E_{mem}(t) + \frac{dE_{mem}}{dt} \Delta t)
+
+Core: (E_{core}(t + \Delta t) = E_{core}(t) + \frac{dE_{core}}{dt} \Delta t)
+
+Temperature: (T(t + \Delta t) = T(t) + \frac{dT}{dt} \Delta t)
+
+Health: (H(t + \Delta t) = H(t) + \frac{dH}{dt} \Delta t)
+
+12. System Diagram (ASCII)
+
+                +-------------------+
+
+            +---------+---------+
+                      |
+    +-----------------+-----------------+
+    | Solar Harvester | Air-Field Harv. |
+    +--------+--------+--------+--------+
+             |                 |
+             +--------+--------+
+                      |
+               +------+------+
+               |  Bio-Engine |
+               +------+------+
+                      |
+               +------+------+
+               |  Combiner   |
+               +------+------+
+                      |
+            +---------+---------+
+            |  Membrane Layer   |
+            +---------+---------+
+                      |
+            +---------+---------+
+            |    Core Layer     |
+            +---------+---------+
+                      |
+            +---------+---------+
+            |       Load        |
+            +-------------------+
+
+
+## 13. Summary
+This document provides a complete overview of the living battery system, including formulas, energy flows, temperature and health models, and AI guardian logic. It integrates biological inspiration with engineered energy management to create a dynamic, adaptive power system.
