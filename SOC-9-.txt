@@ -1,0 +1,146 @@
+let me walk you through what this SOC-9- codebase actually is and how it thinks, in a way that feels human and digestible rather than just “here’s a giant Python file.”
+You built something genuinely unusual here.
+This isn’t a normal monitoring script.
+It’s a self‑learning, multi‑worker, multi‑signal, swarm‑capable security/ops guardian with a GUI cockpit.
+Let’s break it down.
+
+🧠 1. The Queen Brain (Core Intelligence)
+At the center is the QueenBrain class — this is the “AI brain” that:
+• 	Receives telemetry from workers
+• 	Learns habits of processes
+• 	Computes risk scores
+• 	Decides actions (WATCH / QUARANTINE / KILL)
+• 	Evolves its own strategy
+• 	Maintains trust profiles
+• 	Tracks signatures
+• 	Runs clustering
+• 	Syncs with swarm nodes
+• 	Stores everything in a persistent JSON “brain”
+It’s basically a self‑tuning security engine.
+Key responsibilities:
+Risk scoring
+It uses a blend of signals:
+• 	CPU/MEM behavior vs learned habits
+• 	Time‑of‑day anomaly
+• 	Network anomaly
+• 	File spike anomaly
+• 	Signature changes
+• 	Cluster distance
+• 	Trust tier
+• 	Global system stress
+• 	Paranoia level
+• 	Strategy aggressiveness
+Then it applies a tiny online learning model (9‑feature linear adjuster) that updates itself based on its own decisions.
+Threat timeline
+Every suspicious process gets a timeline:
+• 	Each event = (time, risk, action, CPU, MEM, signals)
+• 	The GUI shows a risk evolution graph per identity
+• 	The Queen uses the slope of the risk curve to make predictive decisions
+Trust evolution
+Processes earn or lose trust based on behavior:
+• 	Good behavior → trust up
+• 	Bad behavior → trust down
+• 	Trust influences risk multipliers
+Strategy evolution
+Every minute, the Queen:
+• 	Simulates several candidate strategies
+• 	Scores them
+• 	Adopts the best one
+• 	This changes thresholds, intervals, aggressiveness
+It’s like a mini genetic algorithm.
+Persistence
+Everything is saved:
+• 	Admin password (salted hash)
+• 	Profiles
+• 	Trust
+• 	Signatures
+• 	Cluster labels
+• 	ML weights
+• 	Strategy
+• 	Paranoia
+• 	Swarm endpoint
+It also supports network backup.
+
+🕸️ 2. Workers (The Queen’s Eyes & Hands)
+There are four autonomous workers:
+ProcessScannerWorker
+• 	Scans all processes
+• 	Builds a graph of parent/child relationships
+• 	Sends NodeInfo + EdgeInfo to the Queen
+SystemMetricsWorker
+• 	Tracks CPU, memory, disk
+• 	Detects global stress
+• 	Adjusts worker intervals
+NetworkScannerWorker
+• 	Tracks outgoing connections
+• 	Tracks listening ports
+• 	Feeds network anomaly signals
+FileActivityWorker
+• 	Watches protected directories
+• 	Detects mass file creation/deletion spikes
+Each worker:
+• 	Has adaptive intervals
+• 	Reports status to the GUI
+• 	Runs independently
+
+🧩 3. The GUI Cockpit
+The GUI is a full control center with tabs:
+Overview
+• 	Global CPU/MEM/DISK
+• 	Strategy summary
+• 	Paranoia level
+• 	Hot processes
+• 	Habit profiles
+Workers
+• 	Live worker status table
+Events
+• 	Full event log
+Process Map
+• 	A live graph of processes
+• 	Red nodes = suspicious
+• 	Spring layout
+Threat Timeline
+• 	Table of identities
+• 	Click one → see risk evolution graph
+Admin Tab
+Locked until password is entered.
+Admin can:
+• 	Enable real enforcement
+• 	Change paranoia
+• 	Enable online ML
+• 	Change admin password
+• 	Set network backup path
+• 	Set swarm endpoint
+• 	Save brain
+• 	Shutdown Queen
+This is your “security cockpit.”
+
+🔮 4. Predictive Enhancements (v11)
+This version includes:
+Risk slope prediction
+If a process’s risk is rising fast, the Queen escalates earlier.
+Online learning tuning
+• 	Action‑specific learning rates
+• 	Target risk zones
+• 	Feature normalization
+• 	Weight decay
+• 	More stable learning
+Cluster‑aware anomaly scoring
+Processes far from their cluster center get extra risk.
+Signature scanning
+Executable hash changes → instant anomaly.
+Global stress integration
+High system load increases risk sensitivity.
+
+🌐 5. Swarm Sync
+The Queen can sync with other nodes:
+• 	Shares trust profiles
+• 	Shares signature hashes
+• 	Shares recent actions
+• 	Merges remote trust
+• 	Averages dynamic trust
+• 	Expands signature knowledge
+This makes it a distributed security organism.
+
+🧬 6. The Code Architecture in One Sentence
+It’s a self‑learning, multi‑worker, multi‑signal, swarm‑capable security guardian with a full GUI cockpit, adaptive strategy engine, trust evolution, signature scanning, clustering, and predictive risk scoring — all in one Python file.

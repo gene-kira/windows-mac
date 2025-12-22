@@ -1,0 +1,65 @@
+┌──────────────────────────────────────────────────────────────────────────┐
+│                              HIVE GUARDIAN v11                           │
+│                         (Self‑Learning Security Engine)                  │
+└──────────────────────────────────────────────────────────────────────────┘
+
+                                   ┌──────────────┐
+                                   │   GUI Cockpit │
+                                   │ (Tkinter Tabs)│
+                                   └───────┬──────┘
+                                           │
+                                           ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│                              QUEEN BRAIN                                 │
+│                    (Central Intelligence + Memory)                       │
+├──────────────────────────────────────────────────────────────────────────┤
+│  • Receives telemetry from workers                                       │
+│  • Builds process graph                                                  │
+│  • Learns habits (CPU/MEM/time-of-day)                                   │
+│  • Computes risk (multi-signal)                                          │
+│  • Online ML weight adjustment                                           │
+│  • Trust evolution                                                       │
+│  • Signature scanning                                                    │
+│  • Behavioral clustering                                                 │
+│  • Strategy evolution (self-tuning)                                      │
+│  • Threat timeline (per-identity history)                                │
+│  • Swarm sync (distributed knowledge)                                    │
+│  • Persistence (JSON brain + network backup)                             │
+└──────────────────────────────────────────────────────────────────────────┘
+                                           ▲
+                                           │
+                                           │
+┌──────────────────────────────────────────────────────────────────────────┐
+│                               WORKERS                                     │
+├──────────────────────────────────────────────────────────────────────────┤
+│  ProcessScannerWorker                                                     │
+│    • Enumerates processes                                                 │
+│    • CPU/MEM per process                                                  │
+│    • Parent/child edges                                                   │
+│    • Trust tier detection                                                 │
+│                                                                          │
+│  SystemMetricsWorker                                                      │
+│    • Global CPU/MEM/DISK                                                  │
+│    • Detects global stress                                                │
+│    • Adjusts worker intervals                                             │
+│                                                                          │
+│  NetworkScannerWorker                                                     │
+│    • Outgoing connections per PID                                         │
+│    • Listening ports                                                      │
+│                                                                          │
+│  FileActivityWorker                                                       │
+│    • Directory snapshots                                                  │
+│    • Detects file spikes (mass create/delete)                             │
+└──────────────────────────────────────────────────────────────────────────┘
+                                           ▲
+                                           │
+                                           │ Telemetry
+                                           │
+┌──────────────────────────────────────────────────────────────────────────┐
+│                             SYSTEM ENVIRONMENT                            │
+│  • OS processes                                                           │
+│  • CPU/MEM/DISK                                                           │
+│  • Network connections                                                     │
+│  • File system                                                             │
+└──────────────────────────────────────────────────────────────────────────┘
+

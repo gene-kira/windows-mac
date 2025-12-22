@@ -1,0 +1,90 @@
+┌──────────────────────────────────────────────┐
+│ 1. Worker submits SystemSnapshot              │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 2. Queen ingests snapshot                     │
+│    • Update habit profiles                    │
+│    • Update process graph                     │
+│    • Trim snapshot history                    │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 3. Identify "hot" processes                   │
+│    CPU > threshold OR MEM > threshold         │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 4. For each hot process:                      │
+│    Compute risk features:                     │
+│      • CPU ratio vs habit                     │
+│      • MEM ratio vs habit                     │
+│      • Time-of-day anomaly                    │
+│      • Network anomaly                         │
+│      • File spike presence                     │
+│      • Global stress                           │
+│      • Signature change                        │
+│      • Cluster distance                        │
+│      • Trust score                             │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 5. Compute base risk score                    │
+│    (weighted sum of all signals)              │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 6. Apply online ML adjustment                 │
+│    risk = base_risk + Σ(wᵢ * featureᵢ)        │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 7. Predictive escalation                      │
+│    • Look at risk slope over time             │
+│    • If rising fast → escalate action         │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 8. Convert risk → action                      │
+│    <3  → WATCH                                │
+│    3–7 → QUARANTINE                           │
+│    >7  → KILL                                 │
+│    (modified by paranoia, strategy, trust)    │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 9. Record event in Threat Timeline            │
+│    • Append ThreatEvent                       │
+│    • Update trust profile                     │
+│    • Update ML weights                        │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 10. Enforcement (if enabled)                  │
+│     QUARANTINE → suspend process              │
+│     KILL → terminate process                  │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 11. Strategy evolution (periodic)             │
+│     • Simulate candidate strategies           │
+│     • Pick best scoring one                   │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│ 12. Swarm sync (periodic)                     │
+│     • Share trust + signatures                │
+│     • Merge remote knowledge                  │
+└──────────────────────────────────────────────┘
+
