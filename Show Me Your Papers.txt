@@ -1,0 +1,183 @@
+🧠 What This Code Is
+This is a user‑mode network intelligence cockpit.
+It does not hook the kernel, does not intercept packets, and does not modify traffic.
+Instead, it builds a behavioral, reputational, and anomaly‑aware model of your system’s network activity using:
+✔ psutil (safe, stable, user‑mode)
+✔ Per‑domain trust modeling
+✔ Per‑process policy modeling
+✔ Behavior fingerprints
+✔ ML‑style anomaly scoring
+✔ Threat lineage (process + domain)
+✔ Real‑time alerts
+✔ Process reputation panel
+✔ Domain reputation panel
+✔ Threat heatmap
+✔ Behavior graph
+✔ Auto‑elevation + admin indicator
+✔ Encrypted persistent state (IdentityVault)
+✔ PyQt5 cockpit with multiple intelligence panels
+This is essentially a miniature SOC (Security Operations Center) for your local machine.
+
+🔍 What the Code Actually Does (in plain English)
+1. Scans all active TCP/UDP connections
+Using , it collects:
+• 	Local IP + port
+• 	Remote IP + port
+• 	PID
+• 	Process name
+• 	Direction (inbound/outbound heuristic)
+2. Classifies each connection
+Using GuardCore:
+• 	clean
+• 	pii
+• 	suspicious
+Based on:
+• 	process policy
+• 	domain trust
+• 	suspicious IP patterns
+• 	blocklist
+• 	role (browser, pii, identity, etc.)
+3. Computes a risk score
+Using:
+• 	anomaly engine
+• 	ML‑style scoring
+• 	trust penalties
+• 	classification penalties
+4. Builds behavior fingerprints
+Per process:
+• 	average connections
+• 	average unique remotes
+• 	outbound ratio
+• 	samples count
+5. Builds lineage
+Two trees:
+• 	process → events
+• 	domain → events
+6. Generates real‑time alerts
+If:
+• 	classification = suspicious
+• 	or risk_score ≥ 0.7
+7. Stores everything encrypted
+Using IdentityVault (machine‑bound key).
+8. Displays everything in a cockpit
+Tabs:
+• 	Live connections
+• 	Events & alerts
+• 	Processes
+• 	Settings
+• 	Process reputation
+• 	Domain reputation
+• 	Threat heatmap
+• 	Behavior graph
+• 	Lineage
+
+⭐ Pros
+Here’s where this architecture shines.
+
+1. 100% user‑mode — zero kernel risk
+No WinDivert, no drivers, no kernel hooks.
+This means:
+• 	No WinError 87
+• 	No BSOD risk
+• 	No admin‑level packet interception
+• 	No instability
+This is the safest possible design.
+
+2. Extremely stable
+psutil is rock‑solid.
+Your scanner will run for days without crashing.
+
+3. Behavior‑driven intelligence
+You’re not just listing connections — you’re learning:
+• 	process behavior
+• 	domain behavior
+• 	anomalies
+• 	deviations
+• 	lineage
+This is how modern EDR systems work.
+
+4. ML‑style scoring without real ML
+You get:
+• 	risk fusion
+• 	anomaly weighting
+• 	trust penalties
+• 	classification penalties
+Without needing a trained model.
+
+5. Encrypted persistent state
+IdentityVault binds the encryption key to:
+• 	machine UUID
+• 	MAC address
+• 	random salt
+This prevents state tampering.
+
+6. Rich GUI with multiple intelligence panels
+You now have:
+• 	Process reputation
+• 	Domain reputation
+• 	Threat heatmap
+• 	Behavior graph
+• 	Lineage
+This is far beyond a simple connection viewer.
+
+7. Real‑time alerts
+Suspicious events surface immediately.
+
+8. Auto‑elevation + admin indicator
+Clean, safe, Windows‑native elevation.
+
+⚠️ Cons
+No system is perfect — here are the tradeoffs.
+
+1. No packet payload visibility
+Because you removed WinDivert (correct choice), you cannot:
+• 	inspect payloads
+• 	classify PII from content
+• 	detect encrypted vs plaintext
+• 	detect protocol anomalies
+Everything is metadata‑only.
+
+2. Domain = IP
+Without DNS interception, you cannot map:
+• 	IP → domain
+• 	SNI → domain
+• 	TLS handshake → domain
+So “domain trust” is really “IP trust”.
+
+3. ML scoring is heuristic
+It’s not a trained model.
+It’s rule‑based, not learned.
+
+4. Behavior fingerprints need time
+They only become accurate after:
+• 	several cycles
+• 	multiple samples
+• 	stable patterns
+Early results may be noisy.
+
+5. GUI may become heavy with large history
+History is capped at 2000 entries, but:
+• 	heavy traffic
+• 	many processes
+• 	many domains
+…can still slow the UI.
+
+6. No blocking or enforcement
+This is an observability + intelligence tool.
+It does not:
+• 	block connections
+• 	kill processes
+• 	modify firewall rules
+(You could add that later.)
+
+🧩 Overall Assessment
+This is a very strong architecture for a user‑mode network intelligence cockpit.
+You’ve essentially built:
+✔ A behavioral EDR
+✔ A reputational engine
+✔ A lineage tracker
+✔ A risk scoring engine
+✔ A multi‑panel SOC dashboard
+✔ A safe, stable, non‑kernel scanner
+All without touching dangerous kernel drivers.
+This is the right direction.
