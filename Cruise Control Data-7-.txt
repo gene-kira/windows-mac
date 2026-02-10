@@ -1,0 +1,118 @@
+The code is a single‑file autonomous routing organism fused with a multi‑threaded DNS engine and a Qt/PySide6 cockpit. It behaves like a self‑elevating, self‑installing, predictive, swarm‑aware router with a native tactical UI. Everything—crypto, peers, prediction, DNS, backoff, cockpit—is contained in one file.
+
+What the code does
+Elevation and autoloading
+• 	Gains administrator privileges on Windows before running anything else.
+• 	Installs missing Python packages automatically.
+• 	Restarts itself when critical modules appear (PyNaCl, PySide6, PyWin32, uiautomation).
+• 	Guarantees the organism always runs with the required capabilities.
+Trust bundle and crypto
+• 	Loads a JSON trust bundle defining:
+• 	Node identity
+• 	Private/public keys
+• 	Peer list
+• 	Crypto mode
+• 	Swarm key
+• 	Supports three crypto modes:
+• 	strong_only — Ed25519 + SecretBox required
+• 	auto — strong if available, fallback to compat
+• 	compat — XOR‑based pseudo‑signing
+• 	Signs and verifies peer updates.
+• 	Encrypts P2P sync traffic when strong crypto is available.
+QueenRouter (routing brain)
+• 	Maintains the routing atlas for all domains.
+• 	Merges local probe results with peer‑provided results.
+• 	Promotes best candidates based on latency and health.
+• 	Broadcasts updates to trusted peers.
+• 	Accepts updates only from authority‑eligible peers.
+WorkerScanner (probing + backoff)
+• 	Probes domains continuously.
+• 	Uses predictive domain lists (global, hour, day‑of‑week).
+• 	Tracks failures and applies exponential backoff up to 300 seconds.
+• 	Records probe timestamps and failure counts for cockpit display.
+Predictive engine
+• 	Learns domain usage patterns over time.
+• 	Maintains three frequency maps:
+• 	Global
+• 	Hour‑based
+• 	Day‑of‑week
+• 	Feeds predictions back into WorkerScanner.
+Multi‑threaded DNS organ
+• 	Listens on UDP port 53.
+• 	Spawns a worker thread for each DNS query.
+• 	Handles A and AAAA queries.
+• 	Uses QueenRouter’s atlas for instant answers.
+• 	Falls back to upstream DNS when needed.
+• 	Includes a worker cap to prevent thread explosion under attack.
+Status API
+• 	Read‑only HTTP server exposing:
+• 	
+• 	
+• 	
+• 	
+• 	
+• 	Cockpit polls these endpoints.
+Qt cockpit
+• 	Four tactical panels:
+• 	Atlas
+• 	Peers
+• 	Prediction
+• 	Mode
+• 	Live updates via timers.
+• 	Tooltips for timestamps, reputations, ranks, backoff state.
+• 	Dark neon operator aesthetic.
+
+Pros
+Autonomy
+• 	Self‑elevating, self‑installing, self‑restarting.
+• 	No manual setup required.
+• 	Recovers from missing dependencies automatically.
+Performance
+• 	Multi‑threaded DNS eliminates blocking.
+• 	Predictive scanning reduces latency for frequently used domains.
+• 	Backoff prevents hammering slow or failing domains.
+Security and trust
+• 	Signed updates prevent tampering.
+• 	Encrypted P2P sync when strong crypto is available.
+• 	Peer roles and reputation limit influence of untrusted nodes.
+Operator visibility
+• 	Full cockpit with real‑time data.
+• 	Backoff indicators, tooltips, timestamps.
+• 	Clear crypto mode and UI automation status.
+Single‑file deployment
+• 	Easy to distribute.
+• 	No external services required.
+• 	Everything runs locally.
+
+Cons
+Complexity
+• 	Large monolithic file (~45–90 KB).
+• 	Harder to maintain than modular architecture.
+• 	Many subsystems interacting tightly.
+Dependency footprint
+• 	PyNaCl
+• 	PySide6
+• 	PyWin32
+• 	uiautomation
+• 	Requests
+• 	Autoloader handles installation, but initial setup can be slow.
+Thread overhead
+• 	Multi‑threaded DNS spawns many threads under load.
+• 	Worker cap mitigates this but still adds overhead.
+No control plane
+• 	Cockpit is read‑only.
+• 	Changing settings requires editing the trust bundle and restarting.
+Peer model is simple
+• 	No peer discovery.
+• 	No consensus or quorum.
+• 	Trust and roles rely on static configuration and reputation.
+
+Summary
+The combined file is a self‑contained distributed routing organism with:
+• 	Predictive intelligence
+• 	Multi‑threaded DNS
+• 	Signed and encrypted peer sync
+• 	Exponential backoff
+• 	Real‑time cockpit UI
+• 	Automatic elevation and dependency management
+It is powerful, adaptive, and operator‑visible, but also complex and dependency‑heavy.
