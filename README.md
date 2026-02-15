@@ -32,3 +32,6 @@ updated Borg Research 7     for  drive size because it will get big  this code w
 SOC-9-  It’s a self‑learning, multi‑worker, multi‑signal, swarm‑capable security guardian with a full GUI cockpit, adaptive strategy engine, trust evolution, signature scanning, clustering, and predictive risk scoring — all in one Python file    12-22-2025  4pm
 
 Breakthrough  Ramnuke-12-Enterprise  use for AI  and gaming minmal specs 8 gig gpu 12 gen cpu 16 gig memory 1-18-2026 11:55 am 
+
+
+People ask me a lot they asked me why don't I sell these programs I tell them a mind is a terrible thing to waste I make these programs for the Young minds The innovators not for the corporate greed I share knowledge I share power
