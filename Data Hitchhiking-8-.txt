@@ -1,0 +1,197 @@
+⭐ What This Code Is
+This is no longer a “lab script.”
+You now have a full distributed swarm security organism — a miniature, self‑contained simulation of:
+• 	A cryptographic capsule pipeline
+• 	A distributed registry with Raft‑style consensus
+• 	A multi‑hop routing mesh
+• 	A gate enforcement engine
+• 	A predictive threat‑scoring system
+• 	A lineage‑aware policy engine
+• 	A swarm sync heartbeat system
+• 	A persistent replay‑protection store
+• 	A key distribution hub
+• 	A full Office‑style diagnostic cockpit GUI
+• 	A visual swarm map + lineage tree + threat heatmap
+All in one unified file.
+This is essentially a miniature distributed security platform, with real cryptography, real sockets, real telemetry, and a real operator cockpit.
+
+🎯 What This Code Does for You
+1. Simulates a full secure data‑routing swarm
+Capsules are:
+• 	Created
+• 	Encrypted
+• 	Signed
+• 	Routed
+• 	Validated
+• 	Scored
+• 	Revoked
+• 	Visualized
+You can watch the entire lifecycle in real time.
+
+2. Gives you a SOC‑style cockpit
+The GUI shows:
+• 	Heartbeats
+• 	Node silence detection
+• 	Timeline of events
+• 	Threat heatmap
+• 	Lineage tree
+• 	Swarm map
+• 	Raw telemetry
+• 	Diagnostics
+• 	Exceptions
+• 	Port conflicts
+• 	Activity indicators
+This is the beginning of a professional operator console.
+
+3. Implements a real swarm trust model
+You now have:
+• 	Multi‑gate routing
+• 	Trust decay
+• 	Trust bump on success
+• 	Replay protection
+• 	Resurrection detection
+• 	Lineage enforcement
+• 	Predictive threat scoring
+• 	Persistent nonce store
+• 	Gate‑side key caching
+• 	Raft‑style log replication
+• 	Swarm sync heartbeats
+This is the foundation for a distributed, trust‑aware, lineage‑aware security mesh.
+
+4. Provides a unified architecture you can evolve
+Because everything is in one file, you can easily extend:
+• 	More gates
+• 	More relays
+• 	More registry nodes
+• 	More swarm peers
+• 	More cockpit panels
+• 	More threat heuristics
+• 	Full Raft
+• 	CRDTs
+• 	Multi‑origin lineage
+• 	Capsule payload viewers
+This is your sandbox for the Codex Purge Shell.
+
+✅ Pros
+1. Extremely rich distributed architecture
+You simulate:
+• 	PKI
+• 	Ledger
+• 	Router
+• 	Enforcement engine
+• 	Swarm sync
+• 	Consensus heartbeat
+• 	Telemetry bus
+• 	Operator cockpit
+All in one place.
+
+2. Real cryptography
+AES‑GCM + RSA + fingerprints + signatures + integrity hashing.
+Not mock crypto — real primitives.
+
+3. Strong security semantics
+• 	Replay protection (persistent)
+• 	Resurrection detection
+• 	Lineage enforcement
+• 	Signature verification
+• 	Integrity checking
+• 	Internal‑only propagation rules
+This is a serious data‑sovereignty model.
+
+4. Predictive threat scoring
+Gate emits threat scores based on violations.
+Cockpit visualizes them.
+
+5. Multi‑gate routing with trust decay
+Relay dynamically chooses the best gate based on:
+• 	Trust
+• 	Decay
+• 	Last used time
+This is the beginning of adaptive routing.
+
+6. Raft‑style consensus
+Registry primary replicates log entries to follower:
+• 	AppendEntries
+• 	Heartbeats
+• 	Commit index
+• 	Log application
+This is the skeleton of a real consensus system.
+
+7. Office‑style cockpit
+Tabs for:
+• 	Overview
+• 	Timeline
+• 	Telemetry
+• 	Threats
+• 	Lineage
+• 	Swarm
+• 	Diagnostics
+Plus:
+• 	Heatmap
+• 	Lineage tree
+• 	Swarm map
+• 	Drill‑down inspector
+
+8. Unified file
+Easy to modify, extend, and evolve.
+
+⚠️ Cons / Limitations
+1. Raft is partial
+Missing:
+• 	Leader election
+• 	Log compaction
+• 	Multi‑peer replication
+• 	Term voting logic
+It’s a functional skeleton, not a full implementation.
+
+2. Swarm sync is simple
+No:
+• 	Conflict resolution
+• 	Version vectors
+• 	CRDTs
+• 	Multi‑peer reconciliation
+
+3. Multi‑gate routing is heuristic
+Trust decay is linear.
+No:
+• 	Latency measurement
+• 	Load balancing
+• 	Failure detection
+
+4. Threat scoring is rule‑based
+Not ML‑based.
+No anomaly detection.
+
+5. GUI is Office‑style but not a full ribbon
+Tabs simulate ribbon behavior, but no icon bar or collapsible groups.
+
+6. No TLS yet
+Traffic is plaintext TCP.
+
+7. No capsule payload viewer
+Payloads are encrypted and not displayed in cockpit.
+
+8. No distributed key rotation
+KeyHub stores keys but doesn’t rotate or expire them.
+
+🧠 Summary
+This unified file is a complete distributed swarm security simulation, with:
+• 	Cryptographic capsules
+• 	Routing
+• 	Enforcement
+• 	Registry
+• 	Swarm sync
+• 	Consensus heartbeat
+• 	Threat scoring
+• 	Resurrection detection
+• 	Replay protection
+• 	Multi‑gate routing
+• 	Trust decay
+• 	Telemetry
+• 	Diagnostics
+• 	Office‑style cockpit
+• 	Lineage tree
+• 	Swarm map
+• 	Threat heatmap
+• 	Capsule inspector
+It gives you a sandbox to evolve into a real swarm‑based, lineage‑aware, trust‑driven security organism — the foundation of your Codex Purge Shell vision.
