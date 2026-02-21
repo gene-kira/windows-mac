@@ -1,0 +1,90 @@
+⭐ What This Code Is
+This is a unified CPU/GPU load‑generation engine with:
+• 	One global hybrid governor (absolute + additive)
+• 	A real‑time GUI cockpit with sliders
+• 	A global worker loop that actually burns CPU/GPU cycles
+• 	Remote API (HTTP server) for external control
+• 	Distributed heartbeat (UDP broadcast)
+• 	Persistent settings (JSON config)
+• 	GPU optional acceleration
+• 	Thermal awareness (reads CPU temperature)
+• 	Logging (beast.log)
+It is essentially a software-controlled stress engine that lets you manually dial in how much load you want your system to generate.
+
+⭐ What It Does For You
+✔ 1. Lets you control CPU/GPU load with sliders
+You move a slider → the global load loop increases or decreases iterations → CPU usage rises or falls.
+This is the part you wanted working the most — and now it does.
+✔ 2. Applies a hybrid governor
+Your load is calculated as:
+• 	Absolute floor (guaranteed minimum work)
+• 	Additive scaling (proportional to slider weights)
+This makes the Beast feel “alive” and responsive.
+✔ 3. Runs a real stress workload
+Not fake numbers — real vectorized math using NumPy (and CuPy if GPU is enabled).
+✔ 4. Shows real telemetry
+• 	CPU %
+• 	Temperature
+• 	Cycle count
+• 	GPU enabled state
+• 	Organism weights
+✔ 5. Remote control
+You can hit:
+
+from any device on your network.
+✔ 6. Distributed heartbeat
+It broadcasts a UDP “I’m alive” packet so other nodes can detect it.
+✔ 7. Persists your settings
+Sliders and GPU toggle survive restarts.
+
+⭐ Pros and Cons
+✅ Pros
+1. Sliders actually control CPU load
+This is the biggest win.
+The global loop guarantees predictable behavior.
+2. Hybrid governor feels natural
+The absolute + additive model gives smooth scaling and avoids runaway behavior.
+3. Very stable architecture
+No more per‑core chaos, no more feedback loops fighting each other.
+4. Easy to extend
+You can add:
+• 	More organisms
+• 	More sliders
+• 	More telemetry
+• 	More remote commands
+without breaking the core engine.
+5. Remote API + heartbeat = multi‑node ready
+You can build a swarm dashboard later.
+6. GPU support is optional
+If GPU is missing, it falls back gracefully.
+7. Clean separation of concerns
+• 	Engine = workload
+• 	GUI = control
+• 	Remote = external access
+• 	Heartbeat = networking
+• 	Config = persistence
+This makes the system maintainable.
+
+❌ Cons
+1. CPU load is not perfectly linear
+Because real CPUs have:
+• 	Turbo boost
+• 	Thermal throttling
+• 	OS scheduler interference
+So 50% slider ≠ exactly 50% CPU.
+2. GUI updates only once per second
+This is intentional to avoid lag, but it means telemetry isn’t ultra‑smooth.
+3. GPU load is limited
+CuPy vector cycles are heavy, but not as heavy as a real GPU stress test.
+4. Remote API is simple
+It works, but it’s not authenticated or encrypted.
+5. Heartbeat is broadcast only
+No peer‑to‑peer sync yet — just presence detection.
+6. No per‑core control anymore
+You chose global control (correctly), but it means:
+• 	You can’t target specific cores
+• 	You can’t isolate load to NUMA nodes
+Unless we add that back later.
+
+⭐ Summary (in one sentence)
+This code gives you a fully controllable, hybrid‑governed CPU/GPU stress engine with a GUI cockpit, remote API, heartbeat networking, persistence, and real telemetry — all driven by a single global load loop that finally responds instantly to your sliders.
